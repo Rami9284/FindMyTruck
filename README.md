@@ -57,11 +57,14 @@ Allow food truck owners to broadcast their location and notify subscribers that 
 * Log out
 * Set location/time (for truck owner user)
 
-**Flow Navigation** (Screen to Screen)
-* Forced Log-in -> Account creation if no log in is available
-* Music Selection (Or Queue if Optional) -> Jumps to Chat
-* Profile -> Text field to be modified. 
-* Settings -> Toggle settings
+**Flow Navigation** (Screen to Screen) (TBD)
+* Log-in -> User can view their subscribtions and preferences
+* Forced Log-in -> Truck owners must be logged in to place pin
+* Filter -> 
+* Map -> Shows taco trucks
+* List view -> 
+* Profile -> Text field to be modified.
+* logout -> 
 
 ## Wireframes
 <img src="https://i.imgur.com/9CrjH1K.jpg" width=800><br>
