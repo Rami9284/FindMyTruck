@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		7887B980224C2B6100461A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7887B97F224C2B6100461A5A /* AppDelegate.swift */; };
 		7887B982224C2B6100461A5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7887B981224C2B6100461A5A /* ViewController.swift */; };
-		7887B985224C2B6100461A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887B983224C2B6100461A5A /* Main.storyboard */; };
 		7887B987224C2B6400461A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7887B986224C2B6400461A5A /* Assets.xcassets */; };
 		7887B98A224C2B6400461A5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887B988224C2B6400461A5A /* LaunchScreen.storyboard */; };
 		7887B995224C2B6400461A5A /* FindMyTruckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7887B994224C2B6400461A5A /* FindMyTruckTests.swift */; };
 		7887B9A0224C2B6400461A5A /* FindMyTruckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7887B99F224C2B6400461A5A /* FindMyTruckUITests.swift */; };
+		7887B9AE224C2C1300461A5A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887B9AD224C2C1300461A5A /* Home.storyboard */; };
+		7887B9B0224C2CD300461A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887B9AF224C2CD300461A5A /* Main.storyboard */; };
+		7887B9B2224C2ED200461A5A /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887B9B1224C2ED200461A5A /* List.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,6 @@
 		7887B97C224C2B6100461A5A /* FindMyTruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyTruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7887B97F224C2B6100461A5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7887B981224C2B6100461A5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7887B984224C2B6100461A5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7887B986224C2B6400461A5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7887B989224C2B6400461A5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7887B98B224C2B6400461A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		7887B99B224C2B6400461A5A /* FindMyTruckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMyTruckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7887B99F224C2B6400461A5A /* FindMyTruckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMyTruckUITests.swift; sourceTree = "<group>"; };
 		7887B9A1224C2B6400461A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7887B9AD224C2C1300461A5A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		7887B9AF224C2CD300461A5A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7887B9B1224C2ED200461A5A /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,12 @@
 			children = (
 				7887B97F224C2B6100461A5A /* AppDelegate.swift */,
 				7887B981224C2B6100461A5A /* ViewController.swift */,
-				7887B983224C2B6100461A5A /* Main.storyboard */,
 				7887B986224C2B6400461A5A /* Assets.xcassets */,
 				7887B988224C2B6400461A5A /* LaunchScreen.storyboard */,
 				7887B98B224C2B6400461A5A /* Info.plist */,
+				7887B9AD224C2C1300461A5A /* Home.storyboard */,
+				7887B9AF224C2CD300461A5A /* Main.storyboard */,
+				7887B9B1224C2ED200461A5A /* List.storyboard */,
 			);
 			path = FindMyTruck;
 			sourceTree = "<group>";
@@ -229,9 +235,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7887B9AE224C2C1300461A5A /* Home.storyboard in Resources */,
 				7887B98A224C2B6400461A5A /* LaunchScreen.storyboard in Resources */,
+				7887B9B2224C2ED200461A5A /* List.storyboard in Resources */,
 				7887B987224C2B6400461A5A /* Assets.xcassets in Resources */,
-				7887B985224C2B6100461A5A /* Main.storyboard in Resources */,
+				7887B9B0224C2CD300461A5A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7887B983224C2B6100461A5A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7887B984224C2B6100461A5A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7887B988224C2B6400461A5A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
