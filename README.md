@@ -58,19 +58,20 @@ Allow food truck owners to broadcast their location and notify subscribers that 
 * Set location/time (for truck owner user)
 
 **Flow Navigation** (Screen to Screen) (TBD)
-* Log-in -> User can view their subscribtions and preferences
-* Forced Log-in -> Truck owners must be logged in to place pin
-* Filter -> 
-* Map -> Shows taco trucks
-* List view -> 
-* Profile -> Text field to be modified.
-* logout -> 
+* Map -> Shows taco open truck locations.
+         -> Search -> Search for a specific truck by name.
+         -> Filter -> Filter results with a specific criteria.
+         
+* List view -> Show list of open taco trucks.
 
-## Wireframes
-<img src="https://i.imgur.com/9CrjH1K.jpg" width=800><br>
+* Login/Logout -> If not logged in gives option to login or create a new account.
+                  -> Create Account -> Page that user can create a new user/truck account.
+                  
+* Truck Account Place Pin -> Place pin for truck location.
+                             -> Add/Edit -> Add or Edit pin information.
+                             
+* User Account Favorites -> Add or Edit Users favorite trucks.
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="https://i.imgur.com/lYHn37F.jpg" height=200>
+<img src="https://i.imgur.com/wecjDNT.png" height=200>
 
-### [BONUS] Interactive Prototype
-<img src="https://i.imgur.com/AiKfE5g.gif" width=200>
