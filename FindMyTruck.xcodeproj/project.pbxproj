@@ -17,6 +17,7 @@
 		7887B9AE224C2C1300461A5A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887B9AD224C2C1300461A5A /* Home.storyboard */; };
 		7887B9B0224C2CD300461A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887B9AF224C2CD300461A5A /* Main.storyboard */; };
 		7887B9B2224C2ED200461A5A /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887B9B1224C2ED200461A5A /* List.storyboard */; };
+		78AE16C4225568D8000E89B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE16C3225568D8000E89B4 /* LoginViewController.swift */; };
 		78D30F2E22547C5000049D34 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D30F2D22547C5000049D34 /* HomeViewController.swift */; };
 		CDFA39C5E4C16C7C5DD3ED3F /* Pods_FindMyTruckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 467BE5E8853754DB05E29DE4 /* Pods_FindMyTruckUITests.framework */; };
 		E76CAB618E2F1B5E91A9571A /* Pods_FindMyTruckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C7D43D03CE68BF603A1ADB /* Pods_FindMyTruckTests.framework */; };
@@ -61,6 +62,7 @@
 		7887B9AD224C2C1300461A5A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		7887B9AF224C2CD300461A5A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7887B9B1224C2ED200461A5A /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		78AE16C3225568D8000E89B4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		78D30F2D22547C5000049D34 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7C4EDA7B793352027401707B /* Pods-FindMyTruckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckTests.debug.xcconfig"; path = "Target Support Files/Pods-FindMyTruckTests/Pods-FindMyTruckTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7FCCB4833E18409E319FD67F /* Pods-FindMyTruck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruck.debug.xcconfig"; path = "Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				7887B9AF224C2CD300461A5A /* Main.storyboard */,
 				7887B9B1224C2ED200461A5A /* List.storyboard */,
 				78D30F2D22547C5000049D34 /* HomeViewController.swift */,
+				78AE16C3225568D8000E89B4 /* LoginViewController.swift */,
 			);
 			path = FindMyTruck;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78AE16C4225568D8000E89B4 /* LoginViewController.swift in Sources */,
 				7887B982224C2B6100461A5A /* ViewController.swift in Sources */,
 				7887B980224C2B6100461A5A /* AppDelegate.swift in Sources */,
 				78D30F2E22547C5000049D34 /* HomeViewController.swift in Sources */,
