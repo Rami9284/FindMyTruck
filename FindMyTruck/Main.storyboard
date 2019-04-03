@@ -31,7 +31,7 @@
         <scene sceneID="Uco-Je-TAy">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="I5s-jo-Tch" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LzC-nw-I3T"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="LzC-nw-I3T"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7q3-YO-L77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +41,7 @@
         <scene sceneID="yZU-XV-bJD">
             <objects>
                 <viewControllerPlaceholder storyboardName="List" id="29W-Rc-GQY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fB2-wG-gWx"/>
+                    <tabBarItem key="tabBarItem" title="List" id="fB2-wG-gWx"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJG-ZP-Ro2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
