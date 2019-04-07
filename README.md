@@ -90,7 +90,7 @@ Allow food truck owners to broadcast their location and notify subscribers that 
    | Favorites     | String   | List of users favorite trucks|
    
 ### Networking
-#### List of network requests by screen  --> TO DO
+#### List of network requests by screen  --> TO DO --> DELETE WHEN FINISHED
    - Home Feed Screen
       - (Read/GET) Query all posts where user is author
          ```swift
@@ -115,3 +115,5 @@ Allow food truck owners to broadcast their location and notify subscribers that 
    - Profile Screen
       - (Read/GET) Query logged in user object
       - (Update/PUT) Update user profile image
+      
+      **** UPDATE MILESTONES **** DELETE THIS WHEN FINISHED
