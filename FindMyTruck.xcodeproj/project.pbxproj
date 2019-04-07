@@ -1,0 +1,756 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08815F5074C07486AF1586FA /* Pods_FindMyTruck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB416EBBE675E06603E5F75 /* Pods_FindMyTruck.framework */; };
+		1A0219D422596A7B0010B94C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0219D322596A7B0010B94C /* AppDelegate.swift */; };
+		1A0219D622596A7B0010B94C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0219D522596A7B0010B94C /* ViewController.swift */; };
+		1A0219D922596A7B0010B94C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0219D722596A7B0010B94C /* Main.storyboard */; };
+		1A0219DB22596A870010B94C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0219DA22596A870010B94C /* Assets.xcassets */; };
+		1A0219DE22596A870010B94C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0219DC22596A870010B94C /* LaunchScreen.storyboard */; };
+		1A0219E922596A870010B94C /* FindMyTruckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0219E822596A870010B94C /* FindMyTruckTests.swift */; };
+		1A0219F422596A870010B94C /* FindMyTruckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0219F322596A870010B94C /* FindMyTruckUITests.swift */; };
+		1A8616F822597279001D84B7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A8616F722597279001D84B7 /* Home.storyboard */; };
+		1A8616FA22597295001D84B7 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A8616F922597295001D84B7 /* List.storyboard */; };
+		1A8616FC225980B7001D84B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8616FB225980B7001D84B7 /* LoginViewController.swift */; };
+		1A8616FE225981E9001D84B7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8616FD225981E8001D84B7 /* MapViewController.swift */; };
+		1A8617002259820F001D84B7 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8616FF2259820F001D84B7 /* ListTableViewController.swift */; };
+		1A86170222598796001D84B7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A86170122598795001D84B7 /* Login.storyboard */; };
+		39CC2CCE91D84538F24A70F6 /* Pods_FindMyTruckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E123B7FC7FED100F13A8CAAC /* Pods_FindMyTruckUITests.framework */; };
+		EEDB524012C5BD1877D3D485 /* Pods_FindMyTruckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85E4AE6E67282A5E582707A /* Pods_FindMyTruckTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A0219E522596A870010B94C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A0219C822596A7B0010B94C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A0219CF22596A7B0010B94C;
+			remoteInfo = FindMyTruck;
+		};
+		1A0219F022596A870010B94C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A0219C822596A7B0010B94C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A0219CF22596A7B0010B94C;
+			remoteInfo = FindMyTruck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		059181BBA6F0C445F05A3757 /* Pods-FindMyTruckTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckTests/Pods-FindMyTruckTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A0219D022596A7B0010B94C /* FindMyTruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyTruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0219D322596A7B0010B94C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A0219D522596A7B0010B94C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A0219D822596A7B0010B94C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A0219DA22596A870010B94C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A0219DD22596A870010B94C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A0219DF22596A870010B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A0219E422596A870010B94C /* FindMyTruckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMyTruckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0219E822596A870010B94C /* FindMyTruckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMyTruckTests.swift; sourceTree = "<group>"; };
+		1A0219EA22596A870010B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A0219EF22596A870010B94C /* FindMyTruckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMyTruckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0219F322596A870010B94C /* FindMyTruckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMyTruckUITests.swift; sourceTree = "<group>"; };
+		1A0219F522596A870010B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A8616F722597279001D84B7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		1A8616F922597295001D84B7 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		1A8616FB225980B7001D84B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1A8616FD225981E8001D84B7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1A8616FF2259820F001D84B7 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		1A86170122598795001D84B7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		52CE5BAAC514A9B0075DF85C /* Pods-FindMyTruckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckUITests/Pods-FindMyTruckUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		567755376A50BA10839B13A2 /* Pods-FindMyTruck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck.debug.xcconfig"; sourceTree = "<group>"; };
+		87B8137240379A68ACA9B68F /* Pods-FindMyTruckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckTests/Pods-FindMyTruckTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B85E4AE6E67282A5E582707A /* Pods_FindMyTruckTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruckTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCB416EBBE675E06603E5F75 /* Pods_FindMyTruck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEBD8E35E5642B6E2FB5AD2A /* Pods-FindMyTruckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckUITests/Pods-FindMyTruckUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E123B7FC7FED100F13A8CAAC /* Pods_FindMyTruckUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruckUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0DE72F004934045BCE66E3 /* Pods-FindMyTruck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruck.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A0219CD22596A7B0010B94C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08815F5074C07486AF1586FA /* Pods_FindMyTruck.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0219E122596A870010B94C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDB524012C5BD1877D3D485 /* Pods_FindMyTruckTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0219EC22596A870010B94C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39CC2CCE91D84538F24A70F6 /* Pods_FindMyTruckUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A0219C722596A7B0010B94C = {
+			isa = PBXGroup;
+			children = (
+				1A0219D222596A7B0010B94C /* FindMyTruck */,
+				1A0219E722596A870010B94C /* FindMyTruckTests */,
+				1A0219F222596A870010B94C /* FindMyTruckUITests */,
+				1A0219D122596A7B0010B94C /* Products */,
+				7D2893A8975B18B018C2F864 /* Pods */,
+				2D95E84B64454A784D54F591 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1A0219D122596A7B0010B94C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A0219D022596A7B0010B94C /* FindMyTruck.app */,
+				1A0219E422596A870010B94C /* FindMyTruckTests.xctest */,
+				1A0219EF22596A870010B94C /* FindMyTruckUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A0219D222596A7B0010B94C /* FindMyTruck */ = {
+			isa = PBXGroup;
+			children = (
+				1A0219D322596A7B0010B94C /* AppDelegate.swift */,
+				1A0219D522596A7B0010B94C /* ViewController.swift */,
+				1A0219D722596A7B0010B94C /* Main.storyboard */,
+				1A0219DA22596A870010B94C /* Assets.xcassets */,
+				1A0219DC22596A870010B94C /* LaunchScreen.storyboard */,
+				1A0219DF22596A870010B94C /* Info.plist */,
+				1A8616F722597279001D84B7 /* Home.storyboard */,
+				1A8616F922597295001D84B7 /* List.storyboard */,
+				1A8616FB225980B7001D84B7 /* LoginViewController.swift */,
+				1A8616FD225981E8001D84B7 /* MapViewController.swift */,
+				1A8616FF2259820F001D84B7 /* ListTableViewController.swift */,
+				1A86170122598795001D84B7 /* Login.storyboard */,
+			);
+			path = FindMyTruck;
+			sourceTree = "<group>";
+		};
+		1A0219E722596A870010B94C /* FindMyTruckTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A0219E822596A870010B94C /* FindMyTruckTests.swift */,
+				1A0219EA22596A870010B94C /* Info.plist */,
+			);
+			path = FindMyTruckTests;
+			sourceTree = "<group>";
+		};
+		1A0219F222596A870010B94C /* FindMyTruckUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1A0219F322596A870010B94C /* FindMyTruckUITests.swift */,
+				1A0219F522596A870010B94C /* Info.plist */,
+			);
+			path = FindMyTruckUITests;
+			sourceTree = "<group>";
+		};
+		2D95E84B64454A784D54F591 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCB416EBBE675E06603E5F75 /* Pods_FindMyTruck.framework */,
+				B85E4AE6E67282A5E582707A /* Pods_FindMyTruckTests.framework */,
+				E123B7FC7FED100F13A8CAAC /* Pods_FindMyTruckUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D2893A8975B18B018C2F864 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				567755376A50BA10839B13A2 /* Pods-FindMyTruck.debug.xcconfig */,
+				EA0DE72F004934045BCE66E3 /* Pods-FindMyTruck.release.xcconfig */,
+				87B8137240379A68ACA9B68F /* Pods-FindMyTruckTests.debug.xcconfig */,
+				059181BBA6F0C445F05A3757 /* Pods-FindMyTruckTests.release.xcconfig */,
+				52CE5BAAC514A9B0075DF85C /* Pods-FindMyTruckUITests.debug.xcconfig */,
+				DEBD8E35E5642B6E2FB5AD2A /* Pods-FindMyTruckUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A0219CF22596A7B0010B94C /* FindMyTruck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A0219F822596A870010B94C /* Build configuration list for PBXNativeTarget "FindMyTruck" */;
+			buildPhases = (
+				A8913F2140668B96894F105B /* [CP] Check Pods Manifest.lock */,
+				1A0219CC22596A7B0010B94C /* Sources */,
+				1A0219CD22596A7B0010B94C /* Frameworks */,
+				1A0219CE22596A7B0010B94C /* Resources */,
+				4DC121C17E6AF2842F3FD861 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindMyTruck;
+			productName = FindMyTruck;
+			productReference = 1A0219D022596A7B0010B94C /* FindMyTruck.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1A0219E322596A870010B94C /* FindMyTruckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A0219FB22596A870010B94C /* Build configuration list for PBXNativeTarget "FindMyTruckTests" */;
+			buildPhases = (
+				96FFABD1C0A034A09A9D2067 /* [CP] Check Pods Manifest.lock */,
+				1A0219E022596A870010B94C /* Sources */,
+				1A0219E122596A870010B94C /* Frameworks */,
+				1A0219E222596A870010B94C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A0219E622596A870010B94C /* PBXTargetDependency */,
+			);
+			name = FindMyTruckTests;
+			productName = FindMyTruckTests;
+			productReference = 1A0219E422596A870010B94C /* FindMyTruckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1A0219EE22596A870010B94C /* FindMyTruckUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A0219FE22596A870010B94C /* Build configuration list for PBXNativeTarget "FindMyTruckUITests" */;
+			buildPhases = (
+				8C0873202EE78E3B55A34DAA /* [CP] Check Pods Manifest.lock */,
+				1A0219EB22596A870010B94C /* Sources */,
+				1A0219EC22596A870010B94C /* Frameworks */,
+				1A0219ED22596A870010B94C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A0219F122596A870010B94C /* PBXTargetDependency */,
+			);
+			name = FindMyTruckUITests;
+			productName = FindMyTruckUITests;
+			productReference = 1A0219EF22596A870010B94C /* FindMyTruckUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A0219C822596A7B0010B94C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "chino abatol";
+				TargetAttributes = {
+					1A0219CF22596A7B0010B94C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					1A0219E322596A870010B94C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1A0219CF22596A7B0010B94C;
+					};
+					1A0219EE22596A870010B94C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1A0219CF22596A7B0010B94C;
+					};
+				};
+			};
+			buildConfigurationList = 1A0219CB22596A7B0010B94C /* Build configuration list for PBXProject "FindMyTruck" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A0219C722596A7B0010B94C;
+			productRefGroup = 1A0219D122596A7B0010B94C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A0219CF22596A7B0010B94C /* FindMyTruck */,
+				1A0219E322596A870010B94C /* FindMyTruckTests */,
+				1A0219EE22596A870010B94C /* FindMyTruckUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A0219CE22596A7B0010B94C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A0219DE22596A870010B94C /* LaunchScreen.storyboard in Resources */,
+				1A0219DB22596A870010B94C /* Assets.xcassets in Resources */,
+				1A86170222598796001D84B7 /* Login.storyboard in Resources */,
+				1A8616FA22597295001D84B7 /* List.storyboard in Resources */,
+				1A0219D922596A7B0010B94C /* Main.storyboard in Resources */,
+				1A8616F822597279001D84B7 /* Home.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0219E222596A870010B94C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0219ED22596A870010B94C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4DC121C17E6AF2842F3FD861 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C0873202EE78E3B55A34DAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindMyTruckUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96FFABD1C0A034A09A9D2067 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindMyTruckTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8913F2140668B96894F105B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindMyTruck-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A0219CC22596A7B0010B94C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A8616FC225980B7001D84B7 /* LoginViewController.swift in Sources */,
+				1A0219D622596A7B0010B94C /* ViewController.swift in Sources */,
+				1A0219D422596A7B0010B94C /* AppDelegate.swift in Sources */,
+				1A8617002259820F001D84B7 /* ListTableViewController.swift in Sources */,
+				1A8616FE225981E9001D84B7 /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0219E022596A870010B94C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A0219E922596A870010B94C /* FindMyTruckTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0219EB22596A870010B94C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A0219F422596A870010B94C /* FindMyTruckUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A0219E622596A870010B94C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A0219CF22596A7B0010B94C /* FindMyTruck */;
+			targetProxy = 1A0219E522596A870010B94C /* PBXContainerItemProxy */;
+		};
+		1A0219F122596A870010B94C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A0219CF22596A7B0010B94C /* FindMyTruck */;
+			targetProxy = 1A0219F022596A870010B94C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1A0219D722596A7B0010B94C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A0219D822596A7B0010B94C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1A0219DC22596A870010B94C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A0219DD22596A870010B94C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A0219F622596A870010B94C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1A0219F722596A870010B94C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A0219F922596A870010B94C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 567755376A50BA10839B13A2 /* Pods-FindMyTruck.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindMyTruck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSUMB.FindMyTruck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A0219FA22596A870010B94C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA0DE72F004934045BCE66E3 /* Pods-FindMyTruck.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindMyTruck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSUMB.FindMyTruck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1A0219FC22596A870010B94C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87B8137240379A68ACA9B68F /* Pods-FindMyTruckTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindMyTruckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSUMB.FindMyTruckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindMyTruck.app/FindMyTruck";
+			};
+			name = Debug;
+		};
+		1A0219FD22596A870010B94C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 059181BBA6F0C445F05A3757 /* Pods-FindMyTruckTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindMyTruckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSUMB.FindMyTruckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindMyTruck.app/FindMyTruck";
+			};
+			name = Release;
+		};
+		1A0219FF22596A870010B94C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52CE5BAAC514A9B0075DF85C /* Pods-FindMyTruckUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindMyTruckUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSUMB.FindMyTruckUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindMyTruck;
+			};
+			name = Debug;
+		};
+		1A021A0022596A870010B94C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEBD8E35E5642B6E2FB5AD2A /* Pods-FindMyTruckUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindMyTruckUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSUMB.FindMyTruckUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindMyTruck;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A0219CB22596A7B0010B94C /* Build configuration list for PBXProject "FindMyTruck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A0219F622596A870010B94C /* Debug */,
+				1A0219F722596A870010B94C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A0219F822596A870010B94C /* Build configuration list for PBXNativeTarget "FindMyTruck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A0219F922596A870010B94C /* Debug */,
+				1A0219FA22596A870010B94C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A0219FB22596A870010B94C /* Build configuration list for PBXNativeTarget "FindMyTruckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A0219FC22596A870010B94C /* Debug */,
+				1A0219FD22596A870010B94C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A0219FE22596A870010B94C /* Build configuration list for PBXNativeTarget "FindMyTruckUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A0219FF22596A870010B94C /* Debug */,
+				1A021A0022596A870010B94C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A0219C822596A7B0010B94C /* Project object */;
+}
