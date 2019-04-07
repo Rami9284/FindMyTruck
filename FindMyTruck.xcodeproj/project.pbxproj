@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06CE3F5DF4BAE29CA0A44D24 /* Pods_FindMyTruck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79CF6747FA359E338C3D546 /* Pods_FindMyTruck.framework */; };
 		7887B980224C2B6100461A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7887B97F224C2B6100461A5A /* AppDelegate.swift */; };
 		7887B982224C2B6100461A5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7887B981224C2B6100461A5A /* ViewController.swift */; };
 		7887B987224C2B6400461A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7887B986224C2B6400461A5A /* Assets.xcassets */; };
@@ -18,8 +17,9 @@
 		7887B9B0224C2CD300461A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887B9AF224C2CD300461A5A /* Main.storyboard */; };
 		7887B9B2224C2ED200461A5A /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887B9B1224C2ED200461A5A /* List.storyboard */; };
 		78D30F2E22547C5000049D34 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D30F2D22547C5000049D34 /* HomeViewController.swift */; };
-		CDFA39C5E4C16C7C5DD3ED3F /* Pods_FindMyTruckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 467BE5E8853754DB05E29DE4 /* Pods_FindMyTruckUITests.framework */; };
-		E76CAB618E2F1B5E91A9571A /* Pods_FindMyTruckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C7D43D03CE68BF603A1ADB /* Pods_FindMyTruckTests.framework */; };
+		7E1FEF5AC3A563E765BF5279 /* Pods_FindMyTruckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D63AC95438A0113F3B434855 /* Pods_FindMyTruckTests.framework */; };
+		9E10ED26696B3E1C2B81221E /* Pods_FindMyTruck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E502352D01B6AA3AA5718C /* Pods_FindMyTruck.framework */; };
+		E882D57D0ACACAD6CE15F529 /* Pods_FindMyTruckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C679E688E0651B07991205C /* Pods_FindMyTruckUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17C965DDAF7B6785C28F5B3A /* Pods-FindMyTruck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruck.release.xcconfig"; path = "Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck.release.xcconfig"; sourceTree = "<group>"; };
-		3809DE7803491A001BB8E290 /* Pods-FindMyTruckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckUITests.release.xcconfig"; path = "Target Support Files/Pods-FindMyTruckUITests/Pods-FindMyTruckUITests.release.xcconfig"; sourceTree = "<group>"; };
-		467BE5E8853754DB05E29DE4 /* Pods_FindMyTruckUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruckUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5ADB9E7E3F5DA95F47E3789C /* Pods-FindMyTruckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindMyTruckUITests/Pods-FindMyTruckUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		64CB027F1DE2EAE5097636AF /* Pods-FindMyTruckTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckTests.release.xcconfig"; path = "Target Support Files/Pods-FindMyTruckTests/Pods-FindMyTruckTests.release.xcconfig"; sourceTree = "<group>"; };
-		70C7D43D03CE68BF603A1ADB /* Pods_FindMyTruckTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruckTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C679E688E0651B07991205C /* Pods_FindMyTruckUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruckUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FEA53D24B3A0D866EBCFC09 /* Pods-FindMyTruckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckUITests/Pods-FindMyTruckUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		490727D4DD2ACA58A8108777 /* Pods-FindMyTruckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckUITests/Pods-FindMyTruckUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4D5BD1432241B7CD405A514A /* Pods-FindMyTruck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruck.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck.release.xcconfig"; sourceTree = "<group>"; };
+		5122CC19517CDE3BF49E2D65 /* Pods-FindMyTruckTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckTests/Pods-FindMyTruckTests.release.xcconfig"; sourceTree = "<group>"; };
+		6D5BBBF22228E72936167B30 /* Pods-FindMyTruckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckTests/Pods-FindMyTruckTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7887B97C224C2B6100461A5A /* FindMyTruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyTruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7887B97F224C2B6100461A5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7887B981224C2B6100461A5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,9 +62,9 @@
 		7887B9AF224C2CD300461A5A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7887B9B1224C2ED200461A5A /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		78D30F2D22547C5000049D34 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		7C4EDA7B793352027401707B /* Pods-FindMyTruckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckTests.debug.xcconfig"; path = "Target Support Files/Pods-FindMyTruckTests/Pods-FindMyTruckTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7FCCB4833E18409E319FD67F /* Pods-FindMyTruck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruck.debug.xcconfig"; path = "Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck.debug.xcconfig"; sourceTree = "<group>"; };
-		E79CF6747FA359E338C3D546 /* Pods_FindMyTruck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D63AC95438A0113F3B434855 /* Pods_FindMyTruckTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruckTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9E502352D01B6AA3AA5718C /* Pods_FindMyTruck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB7D5CA22A8B85741B169717 /* Pods-FindMyTruck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06CE3F5DF4BAE29CA0A44D24 /* Pods_FindMyTruck.framework in Frameworks */,
+				9E10ED26696B3E1C2B81221E /* Pods_FindMyTruck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E76CAB618E2F1B5E91A9571A /* Pods_FindMyTruckTests.framework in Frameworks */,
+				7E1FEF5AC3A563E765BF5279 /* Pods_FindMyTruckTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,13 +88,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDFA39C5E4C16C7C5DD3ED3F /* Pods_FindMyTruckUITests.framework in Frameworks */,
+				E882D57D0ACACAD6CE15F529 /* Pods_FindMyTruckUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DD04E68E3FDE10506983107 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9E502352D01B6AA3AA5718C /* Pods_FindMyTruck.framework */,
+				D63AC95438A0113F3B434855 /* Pods_FindMyTruckTests.framework */,
+				0C679E688E0651B07991205C /* Pods_FindMyTruckUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7887B973224C2B6100461A5A = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +113,7 @@
 				7887B99E224C2B6400461A5A /* FindMyTruckUITests */,
 				7887B97D224C2B6100461A5A /* Products */,
 				C6A242B9FD41D5DA41E5EBB2 /* Pods */,
-				AE63D608962A72B7213A0263 /* Frameworks */,
+				4DD04E68E3FDE10506983107 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,25 +161,15 @@
 			path = FindMyTruckUITests;
 			sourceTree = "<group>";
 		};
-		AE63D608962A72B7213A0263 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E79CF6747FA359E338C3D546 /* Pods_FindMyTruck.framework */,
-				70C7D43D03CE68BF603A1ADB /* Pods_FindMyTruckTests.framework */,
-				467BE5E8853754DB05E29DE4 /* Pods_FindMyTruckUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		C6A242B9FD41D5DA41E5EBB2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7FCCB4833E18409E319FD67F /* Pods-FindMyTruck.debug.xcconfig */,
-				17C965DDAF7B6785C28F5B3A /* Pods-FindMyTruck.release.xcconfig */,
-				7C4EDA7B793352027401707B /* Pods-FindMyTruckTests.debug.xcconfig */,
-				64CB027F1DE2EAE5097636AF /* Pods-FindMyTruckTests.release.xcconfig */,
-				5ADB9E7E3F5DA95F47E3789C /* Pods-FindMyTruckUITests.debug.xcconfig */,
-				3809DE7803491A001BB8E290 /* Pods-FindMyTruckUITests.release.xcconfig */,
+				DB7D5CA22A8B85741B169717 /* Pods-FindMyTruck.debug.xcconfig */,
+				4D5BD1432241B7CD405A514A /* Pods-FindMyTruck.release.xcconfig */,
+				6D5BBBF22228E72936167B30 /* Pods-FindMyTruckTests.debug.xcconfig */,
+				5122CC19517CDE3BF49E2D65 /* Pods-FindMyTruckTests.release.xcconfig */,
+				1FEA53D24B3A0D866EBCFC09 /* Pods-FindMyTruckUITests.debug.xcconfig */,
+				490727D4DD2ACA58A8108777 /* Pods-FindMyTruckUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -181,11 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7887B9A4224C2B6400461A5A /* Build configuration list for PBXNativeTarget "FindMyTruck" */;
 			buildPhases = (
-				082C72A7C1CB0BC9F3EBE480 /* [CP] Check Pods Manifest.lock */,
+				5C7E72C106CDA370A1AFEF51 /* [CP] Check Pods Manifest.lock */,
 				7887B978224C2B6100461A5A /* Sources */,
 				7887B979224C2B6100461A5A /* Frameworks */,
 				7887B97A224C2B6100461A5A /* Resources */,
-				43926FE15A7A733B12358B34 /* [CP] Embed Pods Frameworks */,
+				A4B5C49E975149AA13A67394 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,7 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7887B9A7224C2B6400461A5A /* Build configuration list for PBXNativeTarget "FindMyTruckTests" */;
 			buildPhases = (
-				18C3D56F1DB7AC31F17BFD1E /* [CP] Check Pods Manifest.lock */,
+				9D6BBE9031A608BD4C0A61EB /* [CP] Check Pods Manifest.lock */,
 				7887B98C224C2B6400461A5A /* Sources */,
 				7887B98D224C2B6400461A5A /* Frameworks */,
 				7887B98E224C2B6400461A5A /* Resources */,
@@ -219,7 +219,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7887B9AA224C2B6400461A5A /* Build configuration list for PBXNativeTarget "FindMyTruckUITests" */;
 			buildPhases = (
-				C326D1C71C82E045503B58B4 /* [CP] Check Pods Manifest.lock */,
+				B94EA427216895C21514B57D /* [CP] Check Pods Manifest.lock */,
 				7887B997224C2B6400461A5A /* Sources */,
 				7887B998224C2B6400461A5A /* Frameworks */,
 				7887B999224C2B6400461A5A /* Resources */,
@@ -307,7 +307,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		082C72A7C1CB0BC9F3EBE480 /* [CP] Check Pods Manifest.lock */ = {
+		5C7E72C106CDA370A1AFEF51 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -329,7 +329,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		18C3D56F1DB7AC31F17BFD1E /* [CP] Check Pods Manifest.lock */ = {
+		9D6BBE9031A608BD4C0A61EB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,7 +351,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		43926FE15A7A733B12358B34 /* [CP] Embed Pods Frameworks */ = {
+		A4B5C49E975149AA13A67394 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,7 +359,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
@@ -376,10 +376,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C326D1C71C82E045503B58B4 /* [CP] Check Pods Manifest.lock */ = {
+		B94EA427216895C21514B57D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -575,7 +575,7 @@
 		};
 		7887B9A5224C2B6400461A5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FCCB4833E18409E319FD67F /* Pods-FindMyTruck.debug.xcconfig */;
+			baseConfigurationReference = DB7D5CA22A8B85741B169717 /* Pods-FindMyTruck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -593,7 +593,7 @@
 		};
 		7887B9A6224C2B6400461A5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17C965DDAF7B6785C28F5B3A /* Pods-FindMyTruck.release.xcconfig */;
+			baseConfigurationReference = 4D5BD1432241B7CD405A514A /* Pods-FindMyTruck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -611,11 +611,15 @@
 		};
 		7887B9A8224C2B6400461A5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C4EDA7B793352027401707B /* Pods-FindMyTruckTests.debug.xcconfig */;
+			baseConfigurationReference = 6D5BBBF22228E72936167B30 /* Pods-FindMyTruckTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FindMyTruckTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -632,11 +636,15 @@
 		};
 		7887B9A9224C2B6400461A5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64CB027F1DE2EAE5097636AF /* Pods-FindMyTruckTests.release.xcconfig */;
+			baseConfigurationReference = 5122CC19517CDE3BF49E2D65 /* Pods-FindMyTruckTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FindMyTruckTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -653,7 +661,7 @@
 		};
 		7887B9AB224C2B6400461A5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5ADB9E7E3F5DA95F47E3789C /* Pods-FindMyTruckUITests.debug.xcconfig */;
+			baseConfigurationReference = 1FEA53D24B3A0D866EBCFC09 /* Pods-FindMyTruckUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -673,7 +681,7 @@
 		};
 		7887B9AC224C2B6400461A5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3809DE7803491A001BB8E290 /* Pods-FindMyTruckUITests.release.xcconfig */;
+			baseConfigurationReference = 490727D4DD2ACA58A8108777 /* Pods-FindMyTruckUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
