@@ -16,6 +16,7 @@
 		7887B9AE224C2C1300461A5A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887B9AD224C2C1300461A5A /* Home.storyboard */; };
 		7887B9B0224C2CD300461A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887B9AF224C2CD300461A5A /* Main.storyboard */; };
 		7887B9B2224C2ED200461A5A /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887B9B1224C2ED200461A5A /* List.storyboard */; };
+		78AE16C4225568D8000E89B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE16C3225568D8000E89B4 /* LoginViewController.swift */; };
 		78D30F2E22547C5000049D34 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D30F2D22547C5000049D34 /* HomeViewController.swift */; };
 		7E1FEF5AC3A563E765BF5279 /* Pods_FindMyTruckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D63AC95438A0113F3B434855 /* Pods_FindMyTruckTests.framework */; };
 		9E10ED26696B3E1C2B81221E /* Pods_FindMyTruck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E502352D01B6AA3AA5718C /* Pods_FindMyTruck.framework */; };
@@ -61,6 +62,7 @@
 		7887B9AD224C2C1300461A5A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		7887B9AF224C2CD300461A5A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7887B9B1224C2ED200461A5A /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		78AE16C3225568D8000E89B4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		78D30F2D22547C5000049D34 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D63AC95438A0113F3B434855 /* Pods_FindMyTruckTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruckTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E502352D01B6AA3AA5718C /* Pods_FindMyTruck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 				7887B9AF224C2CD300461A5A /* Main.storyboard */,
 				7887B9B1224C2ED200461A5A /* List.storyboard */,
 				78D30F2D22547C5000049D34 /* HomeViewController.swift */,
+				78AE16C3225568D8000E89B4 /* LoginViewController.swift */,
 			);
 			path = FindMyTruck;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78AE16C4225568D8000E89B4 /* LoginViewController.swift in Sources */,
 				7887B982224C2B6100461A5A /* ViewController.swift in Sources */,
 				7887B980224C2B6100461A5A /* AppDelegate.swift in Sources */,
 				78D30F2E22547C5000049D34 /* HomeViewController.swift in Sources */,
