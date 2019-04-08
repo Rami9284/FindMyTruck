@@ -93,7 +93,7 @@ Allow food truck owners to broadcast their location and notify subscribers that 
    | Favorites     | String   | List of users favorite trucks|
    
 ### Networking
-#### List of network requests by screen  --> TO DO --> DELETE WHEN FINISHED
+#### List of network requests by screen
    - Home Map Screen
       - (Read/GET) Query all locations of active trucks and place pin on map.
    - Home List Screen
