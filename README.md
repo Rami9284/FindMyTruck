@@ -81,12 +81,15 @@ Allow food truck owners to broadcast their location and notify subscribers that 
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | UserId        | Number   | unique id for the users |
+   | objectId      | String   | unique id for the users |
    | username      | String   | User identifiers |
-   | userType      | Number   | Differentiates user as a normal user or truck owner |
-   | location      | GeoCoordinate| Geographical location of truck to place pin on map |
+   | password      | String   | Password for user |
+   | email         | String   | users email |
+   | userType      | String   | Differentiates user as a normal user or truck owner |
+   | truckname     | String   | Unique name of truck |
+   | location      | GeoPoint | Geographical location of truck to place pin on map |
    | description   | String   | Description of truck |
-   | Menu          | String   | Trucks available menu |
+   | menu          | String   | Trucks available menu |
    | Favorites     | String   | List of users favorite trucks|
    
 ### Networking
