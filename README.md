@@ -106,5 +106,4 @@ Allow food truck owners to broadcast their location and notify subscribers that 
       - (Update/PUT) Update a Trucks Description/Menu/Location
    - Basic User Favorite
       - (Update/PUT) Update Users favorite list.
-      
-      **** UPDATE MILESTONES **** DELETE THIS WHEN FINISHED
+
