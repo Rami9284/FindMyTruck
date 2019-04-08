@@ -94,29 +94,17 @@ Allow food truck owners to broadcast their location and notify subscribers that 
    
 ### Networking
 #### List of network requests by screen  --> TO DO --> DELETE WHEN FINISHED
-   - Home Feed Screen
-      - (Read/GET) Query all posts where user is author
-         ```swift
-         let query = PFQuery(className:"Post")
-         query.whereKey("author", equalTo: currentUser)
-         query.order(byDescending: "createdAt")
-         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-            if let error = error { 
-               print(error.localizedDescription)
-            } else if let posts = posts {
-               print("Successfully retrieved \(posts.count) posts.")
-           // TODO: Do something with posts...
-            }
-         }
-         ```
-      - (Create/POST) Create a new like on a post
-      - (Delete) Delete existing like
-      - (Create/POST) Create a new comment on a post
-      - (Delete) Delete existing comment
-   - Create Post Screen
-      - (Create/POST) Create a new post object
-   - Profile Screen
-      - (Read/GET) Query logged in user object
-      - (Update/PUT) Update user profile image
+   - Home Map Screen
+      - (Read/GET) Query all locations of active trucks and place pin on map.
+   - Home List Screen
+      - (Read/GET) Query all locations of active trucks.
+   - Login Screen
+      - (Read/GET) Query all users and compare input username/password.
+   - Register Screen
+      - (Create/POST) Create a new Truck/Basic user.
+   - Truck User Description/Menu/Location
+      - (Update/PUT) Update a Trucks Description/Menu/Location
+   - Basic User Favorite
+      - (Update/PUT) Update Users favorite list.
       
       **** UPDATE MILESTONES **** DELETE THIS WHEN FINISHED
