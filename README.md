@@ -26,7 +26,7 @@ Allow food truck owners to broadcast their location and notify subscribers that 
 - [ ] User can log in as user/owner
 - [ ] User logs in to access subscriptions and preferences
 - [ ] Search feature
-- [ ] Google map implementation
+- [X] Google map implementation
 - [ ] Truck Susbription
 - [ ] List view and map view for taco trucks found
 - [ ] Profile pages for each user
