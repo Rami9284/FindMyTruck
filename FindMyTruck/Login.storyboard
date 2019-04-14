@@ -27,6 +27,9 @@
                                 <rect key="frame" x="220" y="418" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <segue destination="zMM-V0-Cyf" kind="modal" id="hrh-lN-kVK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-WA-bTF">
                                 <rect key="frame" x="55" y="251" width="255" height="21"/>
@@ -79,6 +82,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GnD-pJ-R6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-31" y="123"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="dYG-rk-EU1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Register" id="zMM-V0-Cyf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GcI-tC-raQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="-50"/>
         </scene>
     </scenes>
 </document>
