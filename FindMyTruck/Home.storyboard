@@ -39,14 +39,9 @@
                         <viewLayoutGuide key="safeArea" id="VU7-fw-m7E"/>
                     </view>
                     <navigationItem key="navigationItem" title="FindMyTruck" id="7O0-S3-97J">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="1r7-mE-DTd">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MOX-hO-oUz">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="LogIn" id="1Nb-2h-GCo">
                             <connections>
-                                <segue destination="kiC-yh-cfX" kind="presentation" id="E5c-1V-lT7"/>
+                                <segue destination="kiC-yh-cfX" kind="modal" id="qe2-Yt-ImO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -17,6 +17,9 @@ class RegisterViewController: UIViewController {
     }
     
 
+    @IBAction func onCancelBtn(_ sender: Any) {
+     self.dismiss(animated: true, completion:nil)
+    }
     /*
     // MARK: - Navigation
 
