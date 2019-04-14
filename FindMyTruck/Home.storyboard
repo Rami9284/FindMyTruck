@@ -63,11 +63,11 @@
             </objects>
             <point key="canvasLocation" x="1679" y="-268"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="AEM-Wx-rDl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ykd-FU-I49" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zfz-eM-zg5"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="zfz-eM-zg5"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gXo-i3-oC9">
