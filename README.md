@@ -23,7 +23,7 @@ Allow food truck owners to broadcast their location and notify subscribers that 
 
 **Required Must-have Stories**
 
-[ ] User can log in as user/owner
+[ ]User can log in as user/owner
 * User logs in to access subscriptions and preferences
 * Search feature
 * Google map implementation
