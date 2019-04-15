@@ -24,13 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
-//        if PFUser.current() != nil{
-//            let main = UIStoryboard(name: "Main",bundle: nil)
-//
-//            let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedNavigationController")
-//
-//            window?.rootViewController = feedNavigationController
-//        }
+        if PFUser.current() != nil{
+            let main = UIStoryboard(name: "Home",bundle: nil)
+
+            let feedNavigationController = main.instantiateViewController(withIdentifier: "MapViewController")
+
+            window?.rootViewController = feedNavigationController
+        }
         
         return true
     }

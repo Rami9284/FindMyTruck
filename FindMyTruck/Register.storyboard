@@ -90,11 +90,19 @@
                                 <rect key="frame" x="160" y="465" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="onSignUp:" destination="wxy-E3-kRf" eventType="touchUpInside" id="xWo-PO-asT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="P87-W9-UzK"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordfield" destination="ZfV-ja-2Up" id="HUk-xu-DxF"/>
+                        <outlet property="retypedPass" destination="hxJ-xB-x9s" id="tmm-Yk-VWw"/>
+                        <outlet property="usernamefield" destination="NRK-HT-II1" id="utu-uU-y7T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8y-r3-rTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
