@@ -18,14 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdW-Gm-A8N">
-                                <rect key="frame" x="55" y="418" width="100" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log In"/>
-                                <connections>
-                                    <action selector="onLogIn:" destination="D1b-AX-rcc" eventType="touchUpInside" id="jLw-Iq-YBn"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wd-Fk-7DS">
                                 <rect key="frame" x="220" y="418" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -70,6 +62,15 @@
                                     <action selector="onCancelBtn:" destination="D1b-AX-rcc" eventType="touchUpInside" id="2Wy-xu-udD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdW-Gm-A8N">
+                                <rect key="frame" x="55" y="421" width="100" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="onLogIn:" destination="D1b-AX-rcc" eventType="touchUpInside" id="jLw-Iq-YBn"/>
+                                    <segue destination="F8o-UB-vwM" kind="presentation" identifier="loginSegue" id="f83-zf-Zsd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Nfg-hm-FwR"/>
@@ -92,6 +93,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcI-tC-raQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="580" y="-50"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="wTE-jj-HRC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="F8o-UB-vwM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fLh-1v-3Uq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537" y="208"/>
         </scene>
     </scenes>
 </document>

@@ -35,9 +35,7 @@ class LoginViewController: UIViewController {
             (user,error) in
             
             if user != nil {
-                let alert = UIAlertController(title: "it worked", message: "yes", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "", style: .default, handler: nil))
-                self.present(alert,animated: true)
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
         }
 //
