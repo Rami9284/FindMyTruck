@@ -18,17 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdW-Gm-A8N">
-                                <rect key="frame" x="55" y="418" width="100" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log In"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wd-Fk-7DS">
                                 <rect key="frame" x="220" y="418" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <segue destination="zMM-V0-Cyf" kind="modal" id="hrh-lN-kVK"/>
+                                    <segue destination="zMM-V0-Cyf" kind="modal" id="0Dw-mm-tX2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-WA-bTF">
@@ -67,6 +62,15 @@
                                     <action selector="onCancelBtn:" destination="D1b-AX-rcc" eventType="touchUpInside" id="2Wy-xu-udD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdW-Gm-A8N">
+                                <rect key="frame" x="55" y="421" width="100" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="onLogIn:" destination="D1b-AX-rcc" eventType="touchUpInside" id="jLw-Iq-YBn"/>
+                                    <segue destination="F8o-UB-vwM" kind="presentation" identifier="loginSegue" id="f83-zf-Zsd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Nfg-hm-FwR"/>
@@ -75,13 +79,12 @@
                     <connections>
                         <outlet property="loginButton" destination="JdW-Gm-A8N" id="XA7-c3-QCK"/>
                         <outlet property="passwordTextField" destination="cnk-me-FzH" id="I9q-08-i5f"/>
-                        <outlet property="signUpButton" destination="0Wd-Fk-7DS" id="lYK-qE-CqM"/>
                         <outlet property="usernameTextField" destination="3Np-IB-lwD" id="6jC-1d-Ta8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GnD-pJ-R6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-31" y="123"/>
+            <point key="canvasLocation" x="-31.199999999999999" y="122.78860569715144"/>
         </scene>
         <!--Register-->
         <scene sceneID="dYG-rk-EU1">
@@ -90,6 +93,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcI-tC-raQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="580" y="-50"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="wTE-jj-HRC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="F8o-UB-vwM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fLh-1v-3Uq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537" y="208"/>
         </scene>
     </scenes>
 </document>
