@@ -7,16 +7,56 @@
 //
 
 import UIKit
+import Parse
 
 class truckOwner: UIViewController {
 
+    @IBOutlet weak var truckName: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var rePassword: UITextField!
+    @IBOutlet weak var username: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func onSignup(_ sender: Any) {
+        print ("here")
+        let user = PFUser()
+        
+        let usern = username.text
+        let pass = password.text
+        let rePass = rePassword.text
+    
+        //Checks if all fields are filled out
+        if usern == "" || pass == "" || rePass == ""{
+            let alert = UIAlertController(title: "Error", message: "Fields must be filled out", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        }
+        
+        //Checking if passwords match
+        if (pass?.elementsEqual(rePass!))!{
+            //Success- create user
+            //let truckUser = PFObject(className: "User")
+            user["username"] = usern
+            user["password"] = pass
+            user["UserType"] = 0
+            
+            user.signUpInBackground{(success, error) in
+                if (success){
+                    print("User is added")
+                }else{
+                    print("Error creating User")
+                }
+            }
+        }else{
+            let alert = UIAlertController(title: "Error", message: "Passwords do not match", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

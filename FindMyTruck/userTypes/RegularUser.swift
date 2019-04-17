@@ -27,9 +27,7 @@ class regularuser: UIViewController {
                 user.password = passwordfield.text
         
                 if !(user.username?.isEmpty)! && !(user.password?.isEmpty)!{
-                    print("before if")
                     if passwordfield.text == retypedPass.text{
-                        print("inside")
                         user.signUpInBackground{(success, error) in
                             if(success){
                                 //self.performSegue(withIdentifier: "loginSegue", sender: nil)
