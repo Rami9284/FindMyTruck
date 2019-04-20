@@ -22,7 +22,6 @@
                                 <rect key="frame" x="177" y="426" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="LaunchImage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yDP-EC-omj">
                                 <rect key="frame" x="127" y="253" width="121" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
