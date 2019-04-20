@@ -7,19 +7,79 @@
 //
 
 import UIKit
+import Parse
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var viewContainer: UIView!
+    var userView: UIView!
+    var truckView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userView = regularuser().view
+        truckView = truckOwner().view
+        
+        viewContainer.addSubview(userView)
+        viewContainer.addSubview(truckView)
+        
+        viewContainer.bringSubviewToFront(userView)
 
         // Do any additional setup after loading the view.
     }
     
-
-    @IBAction func onCancelBtn(_ sender: Any) {
-     self.dismiss(animated: true, completion:nil)
+    @IBAction func switchUserType(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            viewContainer.bringSubviewToFront(userView)
+        case 1:
+            viewContainer.bringSubviewToFront(truckView)
+        default:
+            break
+        }
     }
+    
+    
+    @IBAction func onCancel(_ sender: Any) {
+        self.dismiss(animated: true, completion:nil)
+    }
+    
+//    @IBAction func onSignUp(_ sender: Any) {
+//        let user = PFUser()
+//        user.username = usernamefield.text
+//        user.password = passwordfield.text
+//
+//        if !(user.username?.isEmpty)! && !(user.password?.isEmpty)!{
+//            print("before if")
+//            if passwordfield.text == retypedPass.text{
+//                print("inside")
+//                user.signUpInBackground{(success, error) in
+//                    if(success){
+//                        //self.performSegue(withIdentifier: "loginSegue", sender: nil)
+//                        let alert = UIAlertController(title: "it worked", message: "yes", preferredStyle: .alert)
+//                        alert.addAction(UIAlertAction(title: "", style: .default, handler: nil))
+//                        self.present(alert,animated: true)
+//                    } else {
+//                        let alert = UIAlertController(title: "", message: "\(error?.localizedDescription)", preferredStyle: .alert)
+//
+//                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+//
+//                        self.present(alert,animated: true)
+//                    }
+//                }
+//            }
+//        }else {
+//            let alert = UIAlertController(title: "", message: "Fields can not be empty!", preferredStyle: .alert)
+//
+//            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+//        }
+//
+//        
+//
+//    }
+    
+    
     /*
     // MARK: - Navigation
 

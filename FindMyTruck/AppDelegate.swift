@@ -19,18 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.initialize(
             with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
-                configuration.applicationId = "Find-My-Truck"
+                configuration.applicationId = "Find_My_Truck"
                 configuration.server = "https://find-mytruck.herokuapp.com/parse"
             })
         )
         
-//        if PFUser.current() != nil{
-//            let main = UIStoryboard(name: "Main",bundle: nil)
-//
-//            let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedNavigationController")
-//
-//            window?.rootViewController = feedNavigationController
-//        }
+        if PFUser.current() != nil{
+            let main = UIStoryboard(name: "Main",bundle: nil)
+
+            let feedNavigationController = main.instantiateViewController(withIdentifier: "UserTabBar")
+
+            window?.rootViewController = feedNavigationController
+        }
         
         return true
     }

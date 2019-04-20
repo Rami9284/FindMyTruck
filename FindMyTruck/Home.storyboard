@@ -13,7 +13,7 @@
         <!--FindMyTruck-->
         <scene sceneID="ztS-ae-pGe">
             <objects>
-                <viewController id="Xfw-nx-pIs" sceneMemberID="viewController">
+                <viewController id="Xfw-nx-pIs" customClass="MapViewController" customModule="FindMyTruck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5TB-22-Vg4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                         <viewLayoutGuide key="safeArea" id="VU7-fw-m7E"/>
                     </view>
                     <navigationItem key="navigationItem" title="FindMyTruck" id="7O0-S3-97J">
-                        <barButtonItem key="rightBarButtonItem" title="LogIn" id="1Nb-2h-GCo">
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="1Nb-2h-GCo">
                             <connections>
                                 <segue destination="kiC-yh-cfX" kind="modal" id="qe2-Yt-ImO"/>
                             </connections>
