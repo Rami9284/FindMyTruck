@@ -33,13 +33,6 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Filter"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapPin" translatesAutoresizingMaskIntoConstraints="NO" id="Ueb-xL-SSE">
-                                <rect key="frame" x="167.5" y="303.5" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="3iP-0V-jti"/>
-                                    <constraint firstAttribute="height" constant="40" id="PTj-Vo-A4w"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -47,8 +40,6 @@
                             <constraint firstItem="xv2-Hy-Ccq" firstAttribute="leading" secondItem="VU7-fw-m7E" secondAttribute="leading" id="Fj8-fo-IFb"/>
                             <constraint firstItem="xv2-Hy-Ccq" firstAttribute="top" secondItem="VU7-fw-m7E" secondAttribute="top" id="NKA-Sv-e8m"/>
                             <constraint firstItem="xv2-Hy-Ccq" firstAttribute="trailing" secondItem="VU7-fw-m7E" secondAttribute="trailing" id="bov-DC-nX3"/>
-                            <constraint firstItem="Ueb-xL-SSE" firstAttribute="centerY" secondItem="5TB-22-Vg4" secondAttribute="centerY" constant="-10" id="fjU-4H-0TJ"/>
-                            <constraint firstItem="Ueb-xL-SSE" firstAttribute="centerX" secondItem="5TB-22-Vg4" secondAttribute="centerX" id="qHx-l1-TXN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VU7-fw-m7E"/>
                     </view>
@@ -96,7 +87,4 @@
             <point key="canvasLocation" x="277.60000000000002" y="83.208395802098963"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="mapPin" width="160" height="160"/>
-    </resources>
 </document>
