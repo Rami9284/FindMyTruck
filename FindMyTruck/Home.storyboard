@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xv2-Hy-Ccq">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xv2-Hy-Ccq">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <searchBar contentMode="redraw" fixedFrame="YES" text="" translatesAutoresizingMaskIntoConstraints="NO" id="ctU-c0-pEE">
                                 <rect key="frame" x="0.0" y="64" width="310" height="56"/>
@@ -36,6 +35,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xv2-Hy-Ccq" secondAttribute="bottom" id="FUz-ds-5dD"/>
+                            <constraint firstItem="xv2-Hy-Ccq" firstAttribute="leading" secondItem="VU7-fw-m7E" secondAttribute="leading" id="Fj8-fo-IFb"/>
+                            <constraint firstItem="xv2-Hy-Ccq" firstAttribute="top" secondItem="VU7-fw-m7E" secondAttribute="top" id="NKA-Sv-e8m"/>
+                            <constraint firstItem="xv2-Hy-Ccq" firstAttribute="trailing" secondItem="VU7-fw-m7E" secondAttribute="trailing" id="bov-DC-nX3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VU7-fw-m7E"/>
                     </view>
                     <navigationItem key="navigationItem" title="FindMyTruck" id="7O0-S3-97J">
@@ -45,6 +50,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="xv2-Hy-Ccq" id="S4h-YD-8uu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYa-60-Bve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
