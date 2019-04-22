@@ -89,7 +89,7 @@
                 <viewControllerPlaceholder storyboardName="Login" id="vBa-zW-cyC" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2g-bq-J3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="-94"/>
+            <point key="canvasLocation" x="1487" y="2"/>
         </scene>
         <!--List-->
         <scene sceneID="sHk-iF-QYm">
