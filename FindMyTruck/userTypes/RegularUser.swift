@@ -23,31 +23,31 @@ class regularuser: UIViewController {
 
     @IBAction func onSignUp(_ sender: Any) {
         let user = PFUser()
-                user.username = usernamefield.text
-                user.password = passwordfield.text
-        
-                if !(user.username?.isEmpty)! && !(user.password?.isEmpty)!{
-                    if passwordfield.text == retypedPass.text{
-                        user.signUpInBackground{(success, error) in
-                            if(success){
-                                //self.performSegue(withIdentifier: "loginSegue", sender: nil)
-                                let alert = UIAlertController(title: "it worked", message: "yes", preferredStyle: .alert)
-                                alert.addAction(UIAlertAction(title: "", style: .default, handler: nil))
-                                self.present(alert,animated: true)
-                            } else {
-                                let alert = UIAlertController(title: "", message: "\(error?.localizedDescription)", preferredStyle: .alert)
-        
-                                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        
-                                self.present(alert,animated: true)
-                            }
-                        }
+        user.username = usernamefield.text
+        user.password = passwordfield.text
+
+        if !(user.username?.isEmpty)! && !(user.password?.isEmpty)!{
+            if passwordfield.text == retypedPass.text{
+                user.signUpInBackground{(success, error) in
+                    if(success){
+                        //self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                        let alert = UIAlertController(title: "it worked", message: "yes", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "", style: .default, handler: nil))
+                        self.present(alert,animated: true)
+                    } else {
+                        let alert = UIAlertController(title: "", message: "\(error?.localizedDescription)", preferredStyle: .alert)
+
+                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+
+                        self.present(alert,animated: true)
                     }
-                }else {
-                    let alert = UIAlertController(title: "", message: "Fields can not be empty!", preferredStyle: .alert)
-        
-                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 }
+            }
+        }else {
+            let alert = UIAlertController(title: "", message: "Fields can not be empty!", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        }
         
         
         

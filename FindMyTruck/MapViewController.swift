@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import Parse
 
 class customPin: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
@@ -24,12 +25,15 @@ class customPin: NSObject, MKAnnotation {
     }
 }
 
+
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
     
     @IBOutlet weak var mapView: MKMapView!
     private let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
     var previousLocation: CLLocation?
+    @IBOutlet weak var loginBtn: UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +42,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         let pin = customPin(pinTitle: "Current Location" , pinSubTitle: "My Current Location", location: CLLocationCoordinate2D(latitude: getLatitude(for: mapView), longitude: getLongitude(for: mapView)))
         self.mapView.addAnnotation(pin)
+        
+//        if PFUser.current() != nil{
+//            loginBtn.accessibilityElementsHidden = true
+//        }
     }
+    
+    
     
     func setupLocationManager(){
         locationManager.delegate = self

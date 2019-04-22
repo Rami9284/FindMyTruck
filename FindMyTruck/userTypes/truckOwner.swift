@@ -40,9 +40,9 @@ class truckOwner: UIViewController {
         if (pass?.elementsEqual(rePass!))!{
             //Success- create user
             //let truckUser = PFObject(className: "User")
-            user["username"] = usern
-            user["password"] = pass
-            user["UserType"] = 0
+//            user["username"] = usern
+//            user["password"] = pass
+//            user["UserType"] = 0
             
             user.signUpInBackground{(success, error) in
                 if (success){

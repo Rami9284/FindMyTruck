@@ -146,11 +146,11 @@
 				1A0219DC22596A870010B94C /* LaunchScreen.storyboard */,
 				1A0219DF22596A870010B94C /* Info.plist */,
 				1A8616F722597279001D84B7 /* Home.storyboard */,
-				1A8616F922597295001D84B7 /* List.storyboard */,
 				1A8616FB225980B7001D84B7 /* LoginViewController.swift */,
 				1A8616FD225981E8001D84B7 /* MapViewController.swift */,
 				1A8616FF2259820F001D84B7 /* ListTableViewController.swift */,
 				1A86170122598795001D84B7 /* Login.storyboard */,
+				1A8616F922597295001D84B7 /* List.storyboard */,
 				BC59F3B0225BF8D3000CAD69 /* Register.storyboard */,
 				BC59F3B4225BFB4C000CAD69 /* RegisterViewController.swift */,
 			);
