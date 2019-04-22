@@ -13,7 +13,7 @@
         <!--FindMyTruck-->
         <scene sceneID="IAF-PL-DY1">
             <objects>
-                <viewController id="vAG-pb-5a3" sceneMemberID="viewController">
+                <viewController id="vAG-pb-5a3" customClass="ListViewContoller" customModule="FindMyTruck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a4X-iG-ej7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,36 +23,49 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="CjA-i8-9iL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="CjA-i8-9iL" customClass="ListCell" customModule="FindMyTruck" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CjA-i8-9iL" id="84v-5F-tCE">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="76.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Truck Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyo-OX-jkR">
-                                                    <rect key="frame" x="15" y="11" width="290" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Truck Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyo-OX-jkR">
+                                                    <rect key="frame" x="15" y="11" width="112.5" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj1-RI-xEC">
-                                                    <rect key="frame" x="29" y="40" width="276" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj1-RI-xEC">
+                                                    <rect key="frame" x="29" y="40" width="63" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfL-hR-79m">
-                                                    <rect key="frame" x="313" y="28" width="47" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfL-hR-79m">
+                                                    <rect key="frame" x="293" y="24" width="67" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BfL-hR-79m" firstAttribute="trailing" secondItem="84v-5F-tCE" secondAttribute="trailingMargin" id="6gD-4z-jYl"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BfL-hR-79m" secondAttribute="bottom" constant="14" id="FBQ-N3-1Qi"/>
+                                                <constraint firstItem="BfL-hR-79m" firstAttribute="top" secondItem="84v-5F-tCE" secondAttribute="topMargin" constant="13" id="Iku-zl-DcL"/>
+                                                <constraint firstItem="BfL-hR-79m" firstAttribute="leading" secondItem="Lyo-OX-jkR" secondAttribute="trailing" constant="165.5" id="NaR-07-mqu"/>
+                                                <constraint firstItem="vj1-RI-xEC" firstAttribute="leading" secondItem="84v-5F-tCE" secondAttribute="leadingMargin" constant="14" id="S1G-nQ-DI5"/>
+                                                <constraint firstItem="Lyo-OX-jkR" firstAttribute="top" secondItem="84v-5F-tCE" secondAttribute="topMargin" id="bzz-Z8-odb"/>
+                                                <constraint firstItem="vj1-RI-xEC" firstAttribute="top" secondItem="Lyo-OX-jkR" secondAttribute="bottom" constant="5" id="fAc-FE-k7m"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vj1-RI-xEC" secondAttribute="bottom" constant="5" id="jim-uz-rRP"/>
+                                                <constraint firstItem="Lyo-OX-jkR" firstAttribute="leading" secondItem="84v-5F-tCE" secondAttribute="leadingMargin" id="n5p-PJ-yxS"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="address" destination="vj1-RI-xEC" id="iRF-Vp-mf3"/>
+                                            <outlet property="distance" destination="BfL-hR-79m" id="NeC-YF-BEk"/>
+                                            <outlet property="truckName" destination="Lyo-OX-jkR" id="QxF-ey-let"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -78,6 +91,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="eME-cV-wEh" id="brh-At-ngA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6id-vL-hNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
