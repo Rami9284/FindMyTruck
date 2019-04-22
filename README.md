@@ -23,13 +23,13 @@ Allow food truck owners to broadcast their location and notify subscribers that 
 
 **Required Must-have Stories**
 
-* User can log in as user/owner
-* User logs in to access subscriptions and preferences
-* Search feature
-* Google map implementation
-* Truck Susbription
-* List view and map view for taco trucks found
-* Profile pages for each user
+- [X] User can log in as user/owner
+- [ ] User logs in to access subscriptions and preferences
+- [ ] Search feature
+- [X] Google map implementation
+- [ ] Truck Susbription
+- [X] List view and map view for taco trucks found
+- [X] Profile pages for each user
 
 **Optional Nice-to-have Stories**
 
@@ -74,6 +74,9 @@ Allow food truck owners to broadcast their location and notify subscribers that 
 
 ### [BONUS] Digital Wireframes & Mockups
 <img src="https://i.imgur.com/wecjDNT.png" height=200>
+
+### Update 4/13/19
+<img src="http://g.recordit.co/72qXuWSfTU.gif">
 
 ## Schema 
 ### Models

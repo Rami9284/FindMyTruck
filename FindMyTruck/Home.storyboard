@@ -13,7 +13,7 @@
         <!--FindMyTruck-->
         <scene sceneID="ztS-ae-pGe">
             <objects>
-                <viewController id="Xfw-nx-pIs" sceneMemberID="viewController">
+                <viewController id="Xfw-nx-pIs" customClass="MapViewController" customModule="FindMyTruck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5TB-22-Vg4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,14 +39,9 @@
                         <viewLayoutGuide key="safeArea" id="VU7-fw-m7E"/>
                     </view>
                     <navigationItem key="navigationItem" title="FindMyTruck" id="7O0-S3-97J">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="1r7-mE-DTd">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MOX-hO-oUz">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="1Nb-2h-GCo">
                             <connections>
-                                <segue destination="kiC-yh-cfX" kind="presentation" id="E5c-1V-lT7"/>
+                                <segue destination="kiC-yh-cfX" kind="modal" id="qe2-Yt-ImO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -63,11 +58,11 @@
             </objects>
             <point key="canvasLocation" x="1679" y="-268"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="AEM-Wx-rDl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ykd-FU-I49" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zfz-eM-zg5"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="zfz-eM-zg5"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gXo-i3-oC9">
