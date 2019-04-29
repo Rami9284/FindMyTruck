@@ -8,8 +8,13 @@
 
 import UIKit
 import Parse
+import Firebase
 
 class RegisterViewController: UIViewController {
+    
+    var ref: DatabaseReference!
+    
+    ref = Database.database().reference()
 
     var userView: UIView!
     var truckView: UIView!
