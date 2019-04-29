@@ -8,6 +8,7 @@ target 'FindMyTruck' do
   # Pods for FindMyTruck
   pod "Parse"
   pod "AlamofireImage"
+  pod "Firebase/Core" 
 
   target 'FindMyTruckTests' do
     inherit! :search_paths

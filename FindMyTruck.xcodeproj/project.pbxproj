@@ -28,6 +28,7 @@
 		BC5F554F2266D73C007A954B /* regularuser.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5F554D2266D73C007A954B /* regularuser.xib */; };
 		BC5F55522266D876007A954B /* truckOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5F55502266D876007A954B /* truckOwner.swift */; };
 		BC5F55532266D876007A954B /* truckOwner.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5F55512266D876007A954B /* truckOwner.xib */; };
+		BC7651D622767D2D00E0E5C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC7651D522767D2D00E0E5C9 /* GoogleService-Info.plist */; };
 		EEDB524012C5BD1877D3D485 /* Pods_FindMyTruckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85E4AE6E67282A5E582707A /* Pods_FindMyTruckTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,10 +76,11 @@
 		B85E4AE6E67282A5E582707A /* Pods_FindMyTruckTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruckTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC59F3B0225BF8D3000CAD69 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		BC59F3B4225BFB4C000CAD69 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		BC5F554C2266D73C007A954B /* regularuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regularuser.swift; sourceTree = "<group>"; };
+		BC5F554C2266D73C007A954B /* regularuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 1; path = regularuser.swift; sourceTree = "<group>"; usesTabs = 0; };
 		BC5F554D2266D73C007A954B /* regularuser.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = regularuser.xib; sourceTree = "<group>"; };
 		BC5F55502266D876007A954B /* truckOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = truckOwner.swift; sourceTree = "<group>"; };
 		BC5F55512266D876007A954B /* truckOwner.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = truckOwner.xib; sourceTree = "<group>"; };
+		BC7651D522767D2D00E0E5C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CCB416EBBE675E06603E5F75 /* Pods_FindMyTruck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBD8E35E5642B6E2FB5AD2A /* Pods-FindMyTruckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckUITests/Pods-FindMyTruckUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E123B7FC7FED100F13A8CAAC /* Pods_FindMyTruckUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruckUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,13 +146,14 @@
 				1A0219D722596A7B0010B94C /* Main.storyboard */,
 				1A0219DA22596A870010B94C /* Assets.xcassets */,
 				1A0219DC22596A870010B94C /* LaunchScreen.storyboard */,
+				BC7651D522767D2D00E0E5C9 /* GoogleService-Info.plist */,
 				1A0219DF22596A870010B94C /* Info.plist */,
 				1A8616F722597279001D84B7 /* Home.storyboard */,
-				1A8616F922597295001D84B7 /* List.storyboard */,
 				1A8616FB225980B7001D84B7 /* LoginViewController.swift */,
 				1A8616FD225981E8001D84B7 /* MapViewController.swift */,
 				1A8616FF2259820F001D84B7 /* ListTableViewController.swift */,
 				1A86170122598795001D84B7 /* Login.storyboard */,
+				1A8616F922597295001D84B7 /* List.storyboard */,
 				BC59F3B0225BF8D3000CAD69 /* Register.storyboard */,
 				BC59F3B4225BFB4C000CAD69 /* RegisterViewController.swift */,
 			);
@@ -324,6 +327,7 @@
 				1A86170222598796001D84B7 /* Login.storyboard in Resources */,
 				1A8616FA22597295001D84B7 /* List.storyboard in Resources */,
 				1A0219D922596A7B0010B94C /* Main.storyboard in Resources */,
+				BC7651D622767D2D00E0E5C9 /* GoogleService-Info.plist in Resources */,
 				BC5F55532266D876007A954B /* truckOwner.xib in Resources */,
 				1A8616F822597279001D84B7 /* Home.storyboard in Resources */,
 			);
@@ -358,7 +362,9 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -367,7 +373,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

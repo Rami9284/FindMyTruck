@@ -68,7 +68,6 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="onLogIn:" destination="D1b-AX-rcc" eventType="touchUpInside" id="jLw-Iq-YBn"/>
-                                    <segue destination="F8o-UB-vwM" kind="presentation" identifier="loginSegue" id="f83-zf-Zsd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,7 +76,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="1ee-2b-r3P"/>
                     <connections>
-                        <outlet property="loginButton" destination="JdW-Gm-A8N" id="XA7-c3-QCK"/>
                         <outlet property="passwordTextField" destination="cnk-me-FzH" id="I9q-08-i5f"/>
                         <outlet property="usernameTextField" destination="3Np-IB-lwD" id="6jC-1d-Ta8"/>
                     </connections>
