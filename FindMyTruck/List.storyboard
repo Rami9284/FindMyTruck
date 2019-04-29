@@ -13,7 +13,7 @@
         <!--FindMyTruck-->
         <scene sceneID="IAF-PL-DY1">
             <objects>
-                <viewController id="vAG-pb-5a3" sceneMemberID="viewController">
+                <viewController id="vAG-pb-5a3" customClass="ListViewController" customModule="FindMyTruck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a4X-iG-ej7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="CjA-i8-9iL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="77" id="CjA-i8-9iL" customClass="ListCell" customModule="FindMyTruck" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CjA-i8-9iL" id="84v-5F-tCE">
@@ -53,6 +53,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellDistance" destination="BfL-hR-79m" id="S3H-2S-8O3"/>
+                                            <outlet property="cellTruckname" destination="Lyo-OX-jkR" id="xBT-87-GfL"/>
+                                            <outlet property="celladdress" destination="vj1-RI-xEC" id="r5k-nY-qY0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -78,6 +83,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="eME-cV-wEh" id="KK9-n5-6sw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6id-vL-hNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
