@@ -15,11 +15,12 @@
 		1A0219DE22596A870010B94C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0219DC22596A870010B94C /* LaunchScreen.storyboard */; };
 		1A0219E922596A870010B94C /* FindMyTruckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0219E822596A870010B94C /* FindMyTruckTests.swift */; };
 		1A0219F422596A870010B94C /* FindMyTruckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0219F322596A870010B94C /* FindMyTruckUITests.swift */; };
+		1A33C09C227686A20072E016 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A33C09B227686A20072E016 /* ListCell.swift */; };
+		1A33C09E22768CDF0072E016 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A33C09D22768CDF0072E016 /* ListViewController.swift */; };
 		1A8616F822597279001D84B7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A8616F722597279001D84B7 /* Home.storyboard */; };
 		1A8616FA22597295001D84B7 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A8616F922597295001D84B7 /* List.storyboard */; };
 		1A8616FC225980B7001D84B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8616FB225980B7001D84B7 /* LoginViewController.swift */; };
 		1A8616FE225981E9001D84B7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8616FD225981E8001D84B7 /* MapViewController.swift */; };
-		1A8617002259820F001D84B7 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8616FF2259820F001D84B7 /* ListTableViewController.swift */; };
 		1A86170222598796001D84B7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A86170122598795001D84B7 /* Login.storyboard */; };
 		39CC2CCE91D84538F24A70F6 /* Pods_FindMyTruckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E123B7FC7FED100F13A8CAAC /* Pods_FindMyTruckUITests.framework */; };
 		BC59F3B1225BF8D3000CAD69 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC59F3B0225BF8D3000CAD69 /* Register.storyboard */; };
@@ -64,11 +65,12 @@
 		1A0219EF22596A870010B94C /* FindMyTruckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMyTruckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0219F322596A870010B94C /* FindMyTruckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMyTruckUITests.swift; sourceTree = "<group>"; };
 		1A0219F522596A870010B94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A33C09B227686A20072E016 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		1A33C09D22768CDF0072E016 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		1A8616F722597279001D84B7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		1A8616F922597295001D84B7 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		1A8616FB225980B7001D84B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1A8616FD225981E8001D84B7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		1A8616FF2259820F001D84B7 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		1A86170122598795001D84B7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		52CE5BAAC514A9B0075DF85C /* Pods-FindMyTruckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckUITests/Pods-FindMyTruckUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		567755376A50BA10839B13A2 /* Pods-FindMyTruck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,11 +153,12 @@
 				1A8616F722597279001D84B7 /* Home.storyboard */,
 				1A8616FB225980B7001D84B7 /* LoginViewController.swift */,
 				1A8616FD225981E8001D84B7 /* MapViewController.swift */,
-				1A8616FF2259820F001D84B7 /* ListTableViewController.swift */,
 				1A86170122598795001D84B7 /* Login.storyboard */,
 				1A8616F922597295001D84B7 /* List.storyboard */,
 				BC59F3B0225BF8D3000CAD69 /* Register.storyboard */,
 				BC59F3B4225BFB4C000CAD69 /* RegisterViewController.swift */,
+				1A33C09B227686A20072E016 /* ListCell.swift */,
+				1A33C09D22768CDF0072E016 /* ListViewController.swift */,
 			);
 			path = FindMyTruck;
 			sourceTree = "<group>";
@@ -460,7 +463,8 @@
 				1A0219D622596A7B0010B94C /* ViewController.swift in Sources */,
 				1A0219D422596A7B0010B94C /* AppDelegate.swift in Sources */,
 				BC59F3B5225BFB4C000CAD69 /* RegisterViewController.swift in Sources */,
-				1A8617002259820F001D84B7 /* ListTableViewController.swift in Sources */,
+				1A33C09E22768CDF0072E016 /* ListViewController.swift in Sources */,
+				1A33C09C227686A20072E016 /* ListCell.swift in Sources */,
 				1A8616FE225981E9001D84B7 /* MapViewController.swift in Sources */,
 				BC5F55522266D876007A954B /* truckOwner.swift in Sources */,
 			);
