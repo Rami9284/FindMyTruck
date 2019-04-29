@@ -11,23 +11,28 @@ import Parse
 
 class regularuser: UIViewController {
 
+    @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var retypedPass: UITextField!
     @IBOutlet weak var passwordfield: UITextField!
     @IBOutlet weak var usernamefield: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func onSignUp(_ sender: Any) {
+    
+   
+    
+    @IBAction func onSignUP(_ sender: Any) {
+        print("hello")
         let user = PFUser()
         user.username = usernamefield.text
         user.password = passwordfield.text
-
+        
         if !(user.username?.isEmpty)! && !(user.password?.isEmpty)!{
-            if passwordfield.text == retypedPass.text{
+            
+            if (passwordfield.text?.elementsEqual(retypedPass.text!))!{
+                print("inside")
                 user.signUpInBackground{(success, error) in
                     if(success){
                         //self.performSegue(withIdentifier: "loginSegue", sender: nil)
@@ -35,23 +40,22 @@ class regularuser: UIViewController {
                         alert.addAction(UIAlertAction(title: "", style: .default, handler: nil))
                         self.present(alert,animated: true)
                     } else {
-                        let alert = UIAlertController(title: "", message: "\(error?.localizedDescription)", preferredStyle: .alert)
-
+                        let alert = UIAlertController(title: "", message: "\(error?.localizedDescription ?? "")", preferredStyle: .alert)
+                        
                         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-
+                        
                         self.present(alert,animated: true)
                     }
                 }
             }
         }else {
             let alert = UIAlertController(title: "", message: "Fields can not be empty!", preferredStyle: .alert)
-
+            
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         }
         
-        
-        
     }
+
     
     /*
     // MARK: - Navigation

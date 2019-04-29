@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import CoreLocation
 import UserNotifications
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,20 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        Parse.initialize(
-            with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
-                configuration.applicationId = "Find_My_Truck"
-                configuration.server = "https://find-mytruck.herokuapp.com/parse"
-            })
-        )
+        FirebaseApp.configure()
         
-        if PFUser.current() != nil{
-            let main = UIStoryboard(name: "Main",bundle: nil)
-
-            let feedNavigationController = main.instantiateViewController(withIdentifier: "UserTabBar")
-
-            window?.rootViewController = feedNavigationController
-        }
+//        Parse.initialize(
+//            with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+//                configuration.applicationId = "Find_My_Truck"
+//                configuration.server = "https://find-mytruck.herokuapp.com/parse"
+//            })
+//        )
+        
+//        if PFUser.current() != nil{
+//            let main = UIStoryboard(name: "Main",bundle: nil)
+//
+//            let feedNavigationController = main.instantiateViewController(withIdentifier: "UserTabBar")
+//
+//            window?.rootViewController = feedNavigationController
+//        }
         
 
         return true
