@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 import Parse
+import FirebaseAuth
 
 class customPin: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
@@ -32,9 +33,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     private let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
     var previousLocation: CLLocation?
-    @IBOutlet weak var loginBtn: UIBarButtonItem!
     
-    
+    @IBOutlet weak var onLogoutBtn: UIBarButtonItem!
+    @IBOutlet weak var onloginBtn: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
@@ -43,9 +44,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let pin = customPin(pinTitle: "Current Location" , pinSubTitle: "My Current Location", location: CLLocationCoordinate2D(latitude: getLatitude(for: mapView), longitude: getLongitude(for: mapView)))
         self.mapView.addAnnotation(pin)
         
-//        if PFUser.current() != nil{
-//            loginBtn.accessibilityElementsHidden = true
-//        }
+        if Auth.auth().currentUser != nil {
+            onloginBtn.isEnabled = false
+            onLogoutBtn.isEnabled = true
+        } else {
+            onloginBtn.isEnabled = true
+            onLogoutBtn.isEnabled = false
+        }
+
     }
     
     
@@ -55,6 +61,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
+    @IBAction func onLogout(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            onloginBtn.isEnabled = true
+            onLogoutBtn.isEnabled = false
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
     //Once user's location is determined the map will zoom into location with a span of 10000 meters
     func centerViewOnUserLocation(){
         if let location = locationManager.location?.coordinate{
