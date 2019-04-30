@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -29,22 +30,36 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func onLogIn(_ sender: Any) {
-        let username = usernameTextField.text
+        let email = usernameTextField.text
         let password = passwordTextField.text
         
-        PFUser.logInWithUsername(inBackground: username!, password: password!){
-            (user,error) in
-            
+        Auth.auth().signIn(withEmail: email!, password: password!) { [weak self] user, error in
+            guard let strongSelf = self else { return }
             if user != nil {
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self!.performSegue(withIdentifier: "loginSegue", sender: nil)
+                //self!.dismiss(animated: true, completion:nil)
             }else {
                 let alert = UIAlertController(title: "", message: "\(error?.localizedDescription ?? "")", preferredStyle: .alert)
 
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
 
-                self.present(alert,animated: true)
+                self!.present(alert,animated: true)
             }
         }
+        
+//        PFUser.logInWithUsername(inBackground: username!, password: password!){
+//            (user,error) in
+//
+//            if user != nil {
+//                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+//            }else {
+//                let alert = UIAlertController(title: "", message: "\(error?.localizedDescription ?? "")", preferredStyle: .alert)
+//
+//                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+//
+//                self.present(alert,animated: true)
+//            }
+//        }
     }
     
     

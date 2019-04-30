@@ -8,13 +8,14 @@
 
 import UIKit
 import Parse
+import FirebaseDatabase
 import Firebase
 
 class RegisterViewController: UIViewController {
     
-    var ref: DatabaseReference!
+    var ref:DatabaseReference!
     
-    ref = Database.database().reference()
+    let db = Firestore.firestore()
 
     var userView: UIView!
     var truckView: UIView!
@@ -40,11 +41,24 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        userView = regularuser().view
-//        truckView = truckOwner().view
+        ref = Database.database().reference()
         regularUser()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func onSwitchType(_ sender: Any) {
+        switch (sender as AnyObject).selectedSegmentIndex {
+        case 0:
+            //regular user
+            regularUser()
+            break;
+        case 1:
+            //truck owner
+            truckOwner()
+            break;
+        default:
+            break
+        }
     }
     
     func regularUser(){
@@ -67,27 +81,28 @@ class RegisterViewController: UIViewController {
     
     }
     
-    @IBAction func regularSignUp(_ sender: Any) {
-        let user = PFUser()
-        user.username = RusernameText.text
-        user.password = RpasswordText.text
+    @IBAction func onSignUp(_ sender: Any) {
+        let email = RusernameText.text
+        let password = RpasswordText.text
         
-        if !(user.username?.isEmpty)! && !(user.password?.isEmpty)!{
+        if !(email?.isEmpty)! && !(password?.isEmpty)!{
             
             if (RpasswordText.text?.elementsEqual(RRetypeP.text!))!{
-                print("inside")
-                user.signUpInBackground{(success, error) in
-                    if(success){
-                        //self.performSegue(withIdentifier: "loginSegue", sender: nil)
-                        let alert = UIAlertController(title: "", message: "Successfully Signed Up", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                        self.present(alert,animated: true)
-                    } else {
-                        let alert = UIAlertController(title: "", message: "\(error?.localizedDescription ?? "")", preferredStyle: .alert)
+                
+                Auth.auth().createUser(withEmail: email!, password: password!)
+                { authResult, error in
+                    
+                    if((error) != nil){
+                        let alert = UIAlertController(title: "", message: "\(error!.localizedDescription )", preferredStyle: .alert)
                         
                         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                         
                         self.present(alert,animated: true)
+                    }else if (authResult != nil){
+                        self.db.collection("users").document(email!).setData([
+                            "favorites": ["",""]
+                        ])
+                        self.performSegue(withIdentifier: "loginSegue", sender: nil)
                     }
                 }
             }
@@ -97,6 +112,7 @@ class RegisterViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         }
     }
+    
     
     
     func truckOwner(){
@@ -120,121 +136,54 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func onTruckSignUp(_ sender: Any) {
-        let user = PFUser()
         
-        user.username = TusernameText.text
-        user.password = TpasswordText.text
+        let email = TusernameText.text
+        let password = TpasswordText.text
         let rePass = Tretypepass.text
         let truckName = TtruckNametext.text
-        
-
         
         //Checking if passwords match
         if (TpasswordText.text!.elementsEqual(rePass!) && !(rePass?.isEmpty)! && !(truckName?.isEmpty)! ){
             
-            let truck = PFObject(className: "trucktable")
-            truck["username"] = user.username
-            truck["truckname"] = truckName
-            //user["UserType"] = 0
-            
-            truck.saveInBackground()
-            
-            
-            
-            let u = PFObject(className: "User")
-            u["username"] = user.username
-            u["password"] = user.password
-            u["UserType"] = 0
-            
-            u.saveInBackground()
-//            user.signUpInBackground{(success, error) in
-//                if (success){
-//
-//
-//                    u.saveInBackground()
-//
-//                    print("User is added")
-//
-//                }else{
-//                    let alert = UIAlertController(title: "", message: "\(error?.localizedDescription ?? "")", preferredStyle: .alert)
-//
-//                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-//
-//                    self.present(alert,animated: true)
-//                }
-            }
-//
-//
-//        }else{
-//            let alert = UIAlertController(title: "Error", message: "Passwords do not match", preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-//        }
-    }
-    
-    @IBAction func switchUserType(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            //regular user
-            regularUser()
-            break;
-        case 1:
-            //truck owner
-            truckOwner()
-            break;
-        default:
-            break
+            Auth.auth().createUser(withEmail: email!, password: password!){ authResult, error in
+                
+                if((error) != nil){
+                    
+                    let alert = UIAlertController(title: "", message: "\(error!.localizedDescription )", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alert,animated: true)
+                    
+                }else if ((authResult) != nil){
+                    
+                    let user = Auth.auth().currentUser
+                    //add entry with truck table
+                    self.db.collection("truckusers").addDocument(data: [
+                        "username": email,
+                        "truckname": truckName,
+                        "menu": ["","",""],
+                        "location": "",
+                        "description": "",
+                        "address": "",
+                    ]) { err in
+                        if let err = err {
+                            print("Error writing document: \(err)")
+                        } else {
+                            print("Document successfully written!")
+                        }
+                    }
+                    
+                    self.db.collection("hastruck").document(email!)
+                    
+                    
+                    //self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                }
+        }
         }
     }
-//
-//
-//
+        
     @IBAction func onCancel(_ sender: Any) {
         self.dismiss(animated: true, completion:nil)
     }
     
-//    @IBAction func onSignUp(_ sender: Any) {
-//        let user = PFUser()
-//        user.username = usernamefield.text
-//        user.password = passwordfield.text
-//
-//        if !(user.username?.isEmpty)! && !(user.password?.isEmpty)!{
-//            print("before if")
-//            if passwordfield.text == retypedPass.text{
-//                print("inside")
-//                user.signUpInBackground{(success, error) in
-//                    if(success){
-//                        //self.performSegue(withIdentifier: "loginSegue", sender: nil)
-//                        let alert = UIAlertController(title: "it worked", message: "yes", preferredStyle: .alert)
-//                        alert.addAction(UIAlertAction(title: "", style: .default, handler: nil))
-//                        self.present(alert,animated: true)
-//                    } else {
-//                        let alert = UIAlertController(title: "", message: "\(error?.localizedDescription)", preferredStyle: .alert)
-//
-//                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-//
-//                        self.present(alert,animated: true)
-//                    }
-//                }
-//            }
-//        }else {
-//            let alert = UIAlertController(title: "", message: "Fields can not be empty!", preferredStyle: .alert)
-//
-//            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-//        }
-//
-//
-
-    //}
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
