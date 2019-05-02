@@ -23,35 +23,45 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="77" id="CjA-i8-9iL" customClass="ListCell" customModule="FindMyTruck" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="77"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="114" id="CjA-i8-9iL" customClass="ListCell" customModule="FindMyTruck" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CjA-i8-9iL" id="84v-5F-tCE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="76.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="113.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Truck Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyo-OX-jkR">
-                                                    <rect key="frame" x="15" y="11" width="290" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Truck Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyo-OX-jkR">
+                                                    <rect key="frame" x="15" y="21" width="113" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj1-RI-xEC">
-                                                    <rect key="frame" x="29" y="40" width="276" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj1-RI-xEC">
+                                                    <rect key="frame" x="15" y="67" width="345" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfL-hR-79m">
-                                                    <rect key="frame" x="313" y="28" width="47" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfL-hR-79m">
+                                                    <rect key="frame" x="293" y="24" width="67" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Lyo-OX-jkR" firstAttribute="leading" secondItem="84v-5F-tCE" secondAttribute="leadingMargin" id="Lyf-zM-eOt"/>
+                                                <constraint firstItem="vj1-RI-xEC" firstAttribute="trailing" secondItem="84v-5F-tCE" secondAttribute="trailingMargin" id="Wah-He-i2F"/>
+                                                <constraint firstItem="BfL-hR-79m" firstAttribute="top" secondItem="84v-5F-tCE" secondAttribute="topMargin" constant="13" id="cCf-d9-mtf"/>
+                                                <constraint firstItem="BfL-hR-79m" firstAttribute="leading" secondItem="Lyo-OX-jkR" secondAttribute="trailing" constant="165" id="ceg-Qu-amp"/>
+                                                <constraint firstItem="vj1-RI-xEC" firstAttribute="top" secondItem="Lyo-OX-jkR" secondAttribute="bottom" constant="22" id="fRj-0h-5e6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vj1-RI-xEC" secondAttribute="bottom" constant="15" id="gGa-7X-P9D"/>
+                                                <constraint firstItem="Lyo-OX-jkR" firstAttribute="top" secondItem="84v-5F-tCE" secondAttribute="topMargin" constant="10" id="jdC-c2-OTk"/>
+                                                <constraint firstItem="vj1-RI-xEC" firstAttribute="leading" secondItem="84v-5F-tCE" secondAttribute="leadingMargin" id="kba-c8-Tny"/>
+                                                <constraint firstItem="BfL-hR-79m" firstAttribute="trailing" secondItem="84v-5F-tCE" secondAttribute="trailingMargin" id="lWp-Lo-fly"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BfL-hR-79m" secondAttribute="bottom" constant="58" id="lxh-Hc-pwi"/>
+                                                <constraint firstItem="vj1-RI-xEC" firstAttribute="top" secondItem="Lyo-OX-jkR" secondAttribute="bottom" constant="22" id="veQ-pg-MDi"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellDistance" destination="BfL-hR-79m" id="S3H-2S-8O3"/>
@@ -67,7 +77,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYk-ck-oUa">
-                                <rect key="frame" x="310" y="64" width="58" height="56"/>
+                                <rect key="frame" x="310" y="64" width="38" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Filter"/>
@@ -103,7 +113,7 @@
         <scene sceneID="sHk-iF-QYm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2D9-3g-dae" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" id="H3f-pN-6Ch"/>
+                    <tabBarItem key="tabBarItem" title="List" image="icons8-list-26" id="H3f-pN-6Ch"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rSZ-o3-CY7">
@@ -120,4 +130,7 @@
             <point key="canvasLocation" x="192.80000000000001" y="2.2488755622188905"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-list-26" width="26" height="26"/>
+    </resources>
 </document>

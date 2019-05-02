@@ -12,18 +12,21 @@ import FirebaseDatabase
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var ref:DatabaseReference!
+    
+    lazy var db = Firestore.firestore()
+    
+    var d = [NSObject]()
+    var data=[String : Any]()
+    
     
     @IBOutlet weak var tableView: UITableView!
     
-    var trucks: Firestore!
-    
-    var db = Firestore.firestore()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+        //FirebaseApp.configure()
         
-        FirebaseApp.configure()
-        db = Firestore.firestore()
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
@@ -37,14 +40,22 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! ListCell
         
         db.collection("truckusers").getDocuments() { (querySnapshot, err) in
+            
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+                    self.data = document.data()
+                    
                 }
             }
         }
+        //let jsonData = JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions = [])
+    
+    
+        cell.cellTruckname.text = data["truckname"] as? String
+        cell.celladdress.text = data["address"] as? String
+        cell.cellDistance.text = "2 miles away"
         
         return cell
     }
