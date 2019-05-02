@@ -16,8 +16,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     lazy var db = Firestore.firestore()
     
-    var d = [NSObject]()
-    var data=[String : Any]()
+    var data=[String : Dictionary<String, Any>]()
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -39,26 +38,32 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! ListCell
         
+        
         db.collection("truckusers").getDocuments() { (querySnapshot, err) in
-            
+
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    self.data = document.data()
-                    
+                    self.data[document.documentID] = document.data()                     //print("\(document.documentID) => \(document.data())")
+                   // cell.cellTruckname.text = self.data[document.documentID]!["truckname"]
+                    //cell.celladdress.text = self.data["address"] as? String
+                    cell.cellDistance.text = "2 miles away"
+                    print("\(self.data[document.documentID]!["truckname"])\n")
                 }
             }
         }
-        //let jsonData = JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions = [])
-    
-    
+        
+        for (id, value) in data {
+            print("\(id): \(value)")
+        }
         cell.cellTruckname.text = data["truckname"] as? String
         cell.celladdress.text = data["address"] as? String
         cell.cellDistance.text = "2 miles away"
         
         return cell
     }
+    
     
 
     /*
