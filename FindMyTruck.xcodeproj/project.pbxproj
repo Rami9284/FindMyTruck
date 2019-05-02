@@ -22,6 +22,7 @@
 		1A8616FC225980B7001D84B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8616FB225980B7001D84B7 /* LoginViewController.swift */; };
 		1A8616FE225981E9001D84B7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8616FD225981E8001D84B7 /* MapViewController.swift */; };
 		1A86170222598796001D84B7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A86170122598795001D84B7 /* Login.storyboard */; };
+		1AF99DAC227A58AD00FD2B7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AF99DAB227A58AD00FD2B7E /* GoogleService-Info.plist */; };
 		39CC2CCE91D84538F24A70F6 /* Pods_FindMyTruckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E123B7FC7FED100F13A8CAAC /* Pods_FindMyTruckUITests.framework */; };
 		BC59F3B1225BF8D3000CAD69 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC59F3B0225BF8D3000CAD69 /* Register.storyboard */; };
 		BC59F3B5225BFB4C000CAD69 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC59F3B4225BFB4C000CAD69 /* RegisterViewController.swift */; };
@@ -29,7 +30,6 @@
 		BC5F554F2266D73C007A954B /* regularuser.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5F554D2266D73C007A954B /* regularuser.xib */; };
 		BC5F55522266D876007A954B /* truckOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5F55502266D876007A954B /* truckOwner.swift */; };
 		BC5F55532266D876007A954B /* truckOwner.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5F55512266D876007A954B /* truckOwner.xib */; };
-		BC7651D622767D2D00E0E5C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC7651D522767D2D00E0E5C9 /* GoogleService-Info.plist */; };
 		EEDB524012C5BD1877D3D485 /* Pods_FindMyTruckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85E4AE6E67282A5E582707A /* Pods_FindMyTruckTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +72,7 @@
 		1A8616FB225980B7001D84B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1A8616FD225981E8001D84B7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1A86170122598795001D84B7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		1AF99DAB227A58AD00FD2B7E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52CE5BAAC514A9B0075DF85C /* Pods-FindMyTruckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckUITests/Pods-FindMyTruckUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		567755376A50BA10839B13A2 /* Pods-FindMyTruck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck.debug.xcconfig"; sourceTree = "<group>"; };
 		87B8137240379A68ACA9B68F /* Pods-FindMyTruckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckTests/Pods-FindMyTruckTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +83,6 @@
 		BC5F554D2266D73C007A954B /* regularuser.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = regularuser.xib; sourceTree = "<group>"; };
 		BC5F55502266D876007A954B /* truckOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = truckOwner.swift; sourceTree = "<group>"; };
 		BC5F55512266D876007A954B /* truckOwner.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = truckOwner.xib; sourceTree = "<group>"; };
-		BC7651D522767D2D00E0E5C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CCB416EBBE675E06603E5F75 /* Pods_FindMyTruck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBD8E35E5642B6E2FB5AD2A /* Pods-FindMyTruckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckUITests/Pods-FindMyTruckUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E123B7FC7FED100F13A8CAAC /* Pods_FindMyTruckUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruckUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,8 +148,8 @@
 				1A0219D722596A7B0010B94C /* Main.storyboard */,
 				1A0219DA22596A870010B94C /* Assets.xcassets */,
 				1A0219DC22596A870010B94C /* LaunchScreen.storyboard */,
-				BC7651D522767D2D00E0E5C9 /* GoogleService-Info.plist */,
 				1A0219DF22596A870010B94C /* Info.plist */,
+				1AF99DAB227A58AD00FD2B7E /* GoogleService-Info.plist */,
 				1A8616F722597279001D84B7 /* Home.storyboard */,
 				1A8616FB225980B7001D84B7 /* LoginViewController.swift */,
 				1A8616FD225981E8001D84B7 /* MapViewController.swift */,
@@ -330,7 +330,7 @@
 				1A86170222598796001D84B7 /* Login.storyboard in Resources */,
 				1A8616FA22597295001D84B7 /* List.storyboard in Resources */,
 				1A0219D922596A7B0010B94C /* Main.storyboard in Resources */,
-				BC7651D622767D2D00E0E5C9 /* GoogleService-Info.plist in Resources */,
+				1AF99DAC227A58AD00FD2B7E /* GoogleService-Info.plist in Resources */,
 				BC5F55532266D876007A954B /* truckOwner.xib in Resources */,
 				1A8616F822597279001D84B7 /* Home.storyboard in Resources */,
 			);

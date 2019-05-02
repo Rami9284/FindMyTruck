@@ -7,25 +7,46 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    var trucks: Firestore!
+    
+    var db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        FirebaseApp.configure()
+        db = Firestore.firestore()
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! ListCell
+        
+        db.collection("truckusers").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
+        
+        return cell
     }
     
 
