@@ -30,6 +30,8 @@
 		BC5F554F2266D73C007A954B /* regularuser.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5F554D2266D73C007A954B /* regularuser.xib */; };
 		BC5F55522266D876007A954B /* truckOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5F55502266D876007A954B /* truckOwner.swift */; };
 		BC5F55532266D876007A954B /* truckOwner.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5F55512266D876007A954B /* truckOwner.xib */; };
+		BCCE03852280E34700A3DACE /* AddTruck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCE03842280E34700A3DACE /* AddTruck.storyboard */; };
+		BCCE03872280E3D700A3DACE /* AddTruckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCE03862280E3D700A3DACE /* AddTruckViewController.swift */; };
 		EEDB524012C5BD1877D3D485 /* Pods_FindMyTruckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85E4AE6E67282A5E582707A /* Pods_FindMyTruckTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +85,8 @@
 		BC5F554D2266D73C007A954B /* regularuser.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = regularuser.xib; sourceTree = "<group>"; };
 		BC5F55502266D876007A954B /* truckOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = truckOwner.swift; sourceTree = "<group>"; };
 		BC5F55512266D876007A954B /* truckOwner.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = truckOwner.xib; sourceTree = "<group>"; };
+		BCCE03842280E34700A3DACE /* AddTruck.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTruck.storyboard; sourceTree = "<group>"; };
+		BCCE03862280E3D700A3DACE /* AddTruckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTruckViewController.swift; sourceTree = "<group>"; };
 		CCB416EBBE675E06603E5F75 /* Pods_FindMyTruck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBD8E35E5642B6E2FB5AD2A /* Pods-FindMyTruckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckUITests/Pods-FindMyTruckUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E123B7FC7FED100F13A8CAAC /* Pods_FindMyTruckUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruckUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +163,8 @@
 				BC59F3B4225BFB4C000CAD69 /* RegisterViewController.swift */,
 				1A33C09B227686A20072E016 /* ListCell.swift */,
 				1A33C09D22768CDF0072E016 /* ListViewController.swift */,
+				BCCE03842280E34700A3DACE /* AddTruck.storyboard */,
+				BCCE03862280E3D700A3DACE /* AddTruckViewController.swift */,
 			);
 			path = FindMyTruck;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 				1A86170222598796001D84B7 /* Login.storyboard in Resources */,
 				1A8616FA22597295001D84B7 /* List.storyboard in Resources */,
 				1A0219D922596A7B0010B94C /* Main.storyboard in Resources */,
+				BCCE03852280E34700A3DACE /* AddTruck.storyboard in Resources */,
 				1AF99DAC227A58AD00FD2B7E /* GoogleService-Info.plist in Resources */,
 				BC5F55532266D876007A954B /* truckOwner.xib in Resources */,
 				1A8616F822597279001D84B7 /* Home.storyboard in Resources */,
@@ -478,6 +485,7 @@
 				1A33C09E22768CDF0072E016 /* ListViewController.swift in Sources */,
 				1A33C09C227686A20072E016 /* ListCell.swift in Sources */,
 				1A8616FE225981E9001D84B7 /* MapViewController.swift in Sources */,
+				BCCE03872280E3D700A3DACE /* AddTruckViewController.swift in Sources */,
 				BC5F55522266D876007A954B /* truckOwner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
