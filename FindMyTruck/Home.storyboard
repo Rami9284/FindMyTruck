@@ -33,6 +33,14 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Filter"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOq-8Y-ZhV">
+                                <rect key="frame" x="295" y="539" width="62" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="icons8-plus-90"/>
+                                <connections>
+                                    <segue destination="toC-DL-DKX" kind="presentation" id="CxV-YJ-hor"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -57,6 +65,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="xv2-Hy-Ccq" id="S4h-YD-8uu"/>
+                        <outlet property="onAddbtn" destination="cOq-8Y-ZhV" id="oYC-FK-42K"/>
                         <outlet property="onLogoutBtn" destination="kHo-wu-TTk" id="lci-To-m4W"/>
                         <outlet property="onloginBtn" destination="1Nb-2h-GCo" id="YyT-hl-gIH"/>
                     </connections>
@@ -72,6 +81,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRS-oj-5bj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1662" y="-184"/>
+        </scene>
+        <!--AddTruck-->
+        <scene sceneID="7cG-cg-9A6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTruck" id="toC-DL-DKX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BxN-KY-nJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863" y="177"/>
         </scene>
         <!--Map-->
         <scene sceneID="AEM-Wx-rDl">
@@ -96,5 +113,6 @@
     </scenes>
     <resources>
         <image name="icons8-map-marker-30" width="30" height="30"/>
+        <image name="icons8-plus-90" width="90" height="90"/>
     </resources>
 </document>
