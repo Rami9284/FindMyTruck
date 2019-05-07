@@ -10,6 +10,13 @@ import UIKit
 import CoreLocation
 import MapKit
 
+struct Truck {
+    var truckname: String
+    var address: String
+    var lat: String
+    var long:String
+}
+
 class customPin: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     var title: String?
@@ -21,6 +28,10 @@ class customPin: NSObject, MKAnnotation {
         self.coordinate = location
         
         super.init()
+    }
+    
+    var subtitle: String? {
+        return subTitle
     }
 }
 
