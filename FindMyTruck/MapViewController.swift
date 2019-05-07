@@ -34,6 +34,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     let regionInMeters: Double = 10000
     var previousLocation: CLLocation?
     
+    @IBOutlet weak var onAddbtn: UIButton!
     @IBOutlet weak var onLogoutBtn: UIBarButtonItem!
     @IBOutlet weak var onloginBtn: UIBarButtonItem!
     override func viewDidLoad() {
@@ -47,9 +48,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if Auth.auth().currentUser != nil {
             onloginBtn.isEnabled = false
             onLogoutBtn.isEnabled = true
+            onAddbtn.isHidden = false
         } else {
             onloginBtn.isEnabled = true
             onLogoutBtn.isEnabled = false
+            onAddbtn.isHidden = true
         }
 
     }
