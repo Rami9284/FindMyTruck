@@ -11,7 +11,7 @@ target 'FindMyTruck' do
   pod "Firebase/Core"
   pod "Firebase/Database"
   pod 'Firebase/Auth'
-  pod 'Firebase/Firestore' 
+  pod 'Firebase/Firestore'  
 
   target 'FindMyTruckTests' do
     inherit! :search_paths

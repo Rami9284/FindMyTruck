@@ -112,7 +112,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-map-marker-30" width="30" height="30"/>
-        <image name="icons8-plus-90" width="90" height="90"/>
+        <image name="icons8-map-marker-30" width="22.5" height="22.5"/>
+        <image name="icons8-plus-90" width="154.28572082519531" height="154.28572082519531"/>
     </resources>
 </document>

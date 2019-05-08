@@ -168,7 +168,6 @@
 				1AB208A62280E668003794E7 /* ListDetailsViewController.swift */,
 				BCCE03842280E34700A3DACE /* AddTruck.storyboard */,
 				BCCE03862280E3D700A3DACE /* AddTruckViewController.swift */,
-
 			);
 			path = FindMyTruck;
 			sourceTree = "<group>";
@@ -372,7 +371,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
@@ -405,7 +404,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8C0873202EE78E3B55A34DAA /* [CP] Check Pods Manifest.lock */ = {

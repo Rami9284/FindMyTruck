@@ -11,6 +11,21 @@ import CoreLocation
 import MapKit
 import Parse
 import FirebaseAuth
+import FirebaseFirestore
+
+struct mapTruck{
+    var truckname: String
+    var address: String
+    var lat: String
+    var long:String
+    
+    init(truckname:String, address:String, lat:String, long:String){
+        self.truckname = truckname
+        self.address = address
+        self.lat = lat
+        self.long = long
+    }
+}
 
 class customPin: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
@@ -23,6 +38,10 @@ class customPin: NSObject, MKAnnotation {
         self.coordinate = location
         
         super.init()
+    }
+    
+    var subtitle: String? {
+        return subTitle
     }
 }
 
@@ -37,13 +56,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var onAddbtn: UIButton!
     @IBOutlet weak var onLogoutBtn: UIBarButtonItem!
     @IBOutlet weak var onloginBtn: UIBarButtonItem!
+    
+    var db:Firestore!
+    var data=[String : Dictionary<String, Any>]()
+    var myTrucks = [mapTruck]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
         checkLocationServices()
-        
-        let pin = customPin(pinTitle: "Current Location" , pinSubTitle: "My Current Location", location: CLLocationCoordinate2D(latitude: getLatitude(for: mapView), longitude: getLongitude(for: mapView)))
-        self.mapView.addAnnotation(pin)
+        db = Firestore.firestore()
         
         if Auth.auth().currentUser != nil {
             onloginBtn.isEnabled = false
@@ -54,10 +76,26 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             onLogoutBtn.isEnabled = false
             onAddbtn.isHidden = true
         }
+        
+        loadData()
 
     }
     
-    
+    func loadData(){
+        db.collection("truckusers").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in (querySnapshot?.documents)! {
+                    self.data[document.documentID] = document.data()
+                    self.myTrucks.append(mapTruck(truckname: document["truckname"] as! String, address: document["address"] as! String, lat: document["lat"] as! String, long: document["long"] as! String))
+                }
+                
+            }
+        }
+        
+        
+    }
     
     func setupLocationManager(){
         locationManager.delegate = self
