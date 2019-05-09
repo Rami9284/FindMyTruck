@@ -75,6 +75,14 @@ class MapViewController: UIViewController{
             onloginBtn.isEnabled = false
             onLogoutBtn.isEnabled = true
             onAddbtn.isHidden = false
+            
+            //print(Auth.auth().currentUser?.displayName)
+            if(Auth.auth().currentUser?.displayName == "1" ){
+                onAddbtn.isHidden = false
+            }else{
+                onAddbtn.isHidden = true
+            }
+            
         } else {
             onloginBtn.isEnabled = true
             onLogoutBtn.isEnabled = false

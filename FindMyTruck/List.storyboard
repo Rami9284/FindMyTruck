@@ -92,7 +92,7 @@
                     <navigationItem key="navigationItem" title="FindMyTruck" id="5ln-Ub-USY">
                         <barButtonItem key="rightBarButtonItem" title="Login" id="N9A-ze-UoU">
                             <connections>
-                                <segue destination="vBa-zW-cyC" kind="modal" id="Vae-JY-X6b"/>
+                                <segue destination="vBa-zW-cyC" kind="modal" id="yMz-I9-koy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

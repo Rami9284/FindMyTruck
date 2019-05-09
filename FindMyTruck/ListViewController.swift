@@ -15,6 +15,7 @@ struct Truck {
     var truckname: String
     var description: String
     var address: String
+    var time: String
     var lat: String
     var long:String
     var menu = [String]()
@@ -55,7 +56,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             } else {
                 for document in (querySnapshot?.documents)! {
                     self.data[document.documentID] = document.data()
-                    self.myTrucks.append(Truck(username: document["username"] as! String,truckname: document["truckname"] as! String, description: document["description"] as! String,address: document["address"] as! String,lat: document["lat"] as! String,long: document["long"] as! String, menu: document["menu"] as! [String]))
+                    self.myTrucks.append(Truck(username: document["username"] as! String,truckname: document["truckname"] as! String, description: document["description"] as! String,address: document["address"] as! String,time: document["time"] as! String,lat: document["lat"] as! String,long: document["long"] as! String, menu: document["menu"] as! [String]))
                     self.cellNum += 1
                 }
                 
@@ -78,11 +79,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! ListCell
-        
-
-        print("foo")
-        print (myTrucks)
-
+ 
         cell.cellTruckname.text = myTrucks[indexPath.row].truckname
         cell.celladdress.text = myTrucks[indexPath.row].description
         cell.cellDistance.text = "2 miles away"
