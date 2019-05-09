@@ -31,6 +31,8 @@ class ListDetailsViewController: UIViewController {
         for each in myTruck.menu{
             menu.text = (menu.text ?? "") + each + "\n"
         }
+        address.sizeToFit()
+        detailsDescription.sizeToFit()
         menu.sizeToFit()
         menu.center.x = self.view.center.x
         
