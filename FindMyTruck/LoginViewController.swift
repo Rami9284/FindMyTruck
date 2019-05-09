@@ -9,6 +9,7 @@
 import UIKit
 //import Parse
 import FirebaseAuth
+import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -16,11 +17,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    
+    var db:Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        db = Firestore.firestore()
         // Do any additional setup after loading the view.
     }
     
@@ -36,8 +37,9 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: email!, password: password!) { [weak self] user, error in
             guard let strongSelf = self else { return }
             if user != nil {
+                
                 self!.performSegue(withIdentifier: "loginSegue", sender: nil)
-                //self!.dismiss(animated: true, completion:nil)
+                
             }else {
                 let alert = UIAlertController(title: "", message: "\(error?.localizedDescription ?? "")", preferredStyle: .alert)
 
@@ -45,6 +47,7 @@ class LoginViewController: UIViewController {
 
                 self!.present(alert,animated: true)
             }
+            
         }
         
 //        PFUser.logInWithUsername(inBackground: username!, password: password!){
