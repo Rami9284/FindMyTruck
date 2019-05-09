@@ -112,7 +112,7 @@
             </objects>
             <point key="canvasLocation" x="1756" y="-311"/>
         </scene>
-        <!--List Details View Controller-->
+        <!--Details-->
         <scene sceneID="Ikf-VL-dsT">
             <objects>
                 <viewController id="pBq-BG-WGV" customClass="ListDetailsViewController" customModule="FindMyTruck" customModuleProvider="target" sceneMemberID="viewController">
@@ -125,7 +125,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Truck Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzJ-Zy-zLB">
-                                <rect key="frame" x="53" y="218" width="268" height="41"/>
+                                <rect key="frame" x="16" y="218" width="343" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -139,23 +139,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSE-ql-iXL">
-                                <rect key="frame" x="53" y="267" width="268" height="30"/>
+                                <rect key="frame" x="16" y="267" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menu Items" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5A-NW-utN">
-                                <rect key="frame" x="53" y="389" width="268" height="219"/>
+                                <rect key="frame" x="16" y="389" width="343" height="219"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyG-Fw-0RC">
-                                <rect key="frame" x="53" y="295" width="268" height="39"/>
+                                <rect key="frame" x="16" y="305" width="343" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -163,6 +163,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="u3T-n9-xZt"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Details" id="QRG-ZT-upk">
+                        <barButtonItem key="rightBarButtonItem" title="Directions" id="Nom-GX-JVl">
+                            <connections>
+                                <segue destination="UnV-LP-Psb" kind="show" id="2iL-Tn-4Z3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="address" destination="tSE-ql-iXL" id="jKx-Ie-nAG"/>
                         <outlet property="detailsDescription" destination="xyG-Fw-0RC" id="Vvh-Si-S4e"/>
@@ -174,6 +181,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3L5-Mc-1tm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2056.8000000000002" y="130.88455772113943"/>
+        </scene>
+        <!--Directions View Controller-->
+        <scene sceneID="8Fj-CA-ewf">
+            <objects>
+                <viewController id="UnV-LP-Psb" customClass="DirectionsViewController" customModule="FindMyTruck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CRK-L7-GBo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="P4p-4W-xhr">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cPN-Oe-LUE"/>
+                    </view>
+                    <connections>
+                        <outlet property="mkMapView" destination="P4p-4W-xhr" id="ZZ2-Vk-s4o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tiM-qF-gUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2904.8000000000002" y="130.88455772113943"/>
         </scene>
         <!--List-->
         <scene sceneID="sHk-iF-QYm">
