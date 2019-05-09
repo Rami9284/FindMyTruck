@@ -47,10 +47,10 @@ class ListDetailsViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let long = Double(myTruck.long)
-        let lat = Double(myTruck.lat)
+        let long = myTruck.long.doubleValue
+        let lat = myTruck.lat.doubleValue
         
-        let destCoord = CLLocationCoordinate2DMake(lat!, long!)
+        let destCoord = CLLocationCoordinate2DMake(long, lat)
         let directionsViewController = segue.destination as! DirectionsViewController
         directionsViewController.destCoordinates = destCoord
         
