@@ -205,36 +205,6 @@ extension MapViewController : CLLocationManagerDelegate{
         //Update when the user changes the authorization
         checkLocationAuthorization()
     }
-    
-    //    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-    //        let center = getCenterLocation(for: mapView)
-    //        let geoCoder = CLGeocoder()
-    //
-    //        guard center.distance(from: previousLocation!) > 50 else{ return }
-    //        previousLocation = center
-    //
-    //        geoCoder.reverseGeocodeLocation(center) {[weak self] (placemarks, error) in
-    //            guard let self = self else {return}
-    //
-    //            if let _ = error {
-    //                //TODO: Show alert informing the user
-    //                return
-    //            }
-    //
-    //            guard let placemark = placemarks?.first else{
-    //                //TODO: Show alert informing the user
-    //                return
-    //            }
-    //
-    //            let streetNumber = placemark.subThoroughfare
-    //            let streetName = placemark.thoroughfare
-    //
-    //            DispatchQueue.main.sync {
-    //                //self.addressLabel.text = "\(streetNumber) \(streetName)"
-    //            }
-    //
-    //        }
-    //    }
 }
 
 extension MapViewController: MKMapViewDelegate{
