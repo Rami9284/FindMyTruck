@@ -23,13 +23,12 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "ResizedAppIcon2x.png",
+      "filename" : "icons8-taco-80.png",
       "scale" : "2x"
     },
     {
-      "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "ResiziedAppIcon3x.png",
+      "size" : "40x40",
       "scale" : "3x"
     },
     {
