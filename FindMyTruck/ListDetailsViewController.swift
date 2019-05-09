@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class ListDetailsViewController: UIViewController {
     
@@ -41,14 +42,21 @@ class ListDetailsViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let long = Double(myTruck.long)
+        let lat = Double(myTruck.lat)
+        
+        let destCoord = CLLocationCoordinate2DMake(lat!, long!)
+        let directionsViewController = segue.destination as! DirectionsViewController
+        directionsViewController.destCoordinates = destCoord
+        
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }
