@@ -33,6 +33,9 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
             locationManager.startUpdatingLocation()
         }
         
+        print(destCoordinates.latitude)
+        print(destCoordinates.longitude)
+        
         let sourceCoordinates = locationManager.location?.coordinate
         let sourcePlacemark = MKPlacemark(coordinate: sourceCoordinates!)
         let destPlacemark = MKPlacemark(coordinate: destCoordinates)
@@ -49,7 +52,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         directions.calculate(completionHandler: { (response, error) in
             guard let response = response else {
                 if let error = error {
-                    print("Error")
+                    print("Error: " + error.localizedDescription)
                 }
                 return
             }
