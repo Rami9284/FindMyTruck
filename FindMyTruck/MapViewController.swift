@@ -12,19 +12,13 @@ import MapKit
 import Parse
 import FirebaseAuth
 import FirebaseFirestore
+import AddressBook
 
 struct mapTruck{
     var truckname: String
     var address: String
-    var lat: String
-    var long:String
-    
-    init(truckname:String, address:String, lat:String, long:String){
-        self.truckname = truckname
-        self.address = address
-        self.lat = lat
-        self.long = long
-    }
+    var lat: NSString
+    var long:NSString
 }
 
 class customPin: NSObject, MKAnnotation {
@@ -43,10 +37,20 @@ class customPin: NSObject, MKAnnotation {
     var subtitle: String? {
         return subTitle
     }
+    
+    func mapItem() -> MKMapItem{
+        let addressDictionary = [String(kABPersonAddressStreetKey) : subTitle]
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDictionary)
+        let mapItem = MKMapItem(placemark: placemark)
+        
+        mapItem.name = "\(title) \(subTitle)"
+        
+        return mapItem
+    }
 }
 
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
+class MapViewController: UIViewController{
     
     @IBOutlet weak var mapView: MKMapView!
     private let locationManager = CLLocationManager()
@@ -89,6 +93,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        checkLocationServiceAuthenticationStatus()
+    }
+    
     func loadData(){
         db.collection("truckusers").getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -96,13 +106,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             } else {
                 for document in (querySnapshot?.documents)! {
                     self.data[document.documentID] = document.data()
-                    self.myTrucks.append(mapTruck(truckname: document["truckname"] as! String, address: document["address"] as! String, lat: document["lat"] as! String, long: document["long"] as! String))
+                    self.myTrucks.append(mapTruck(truckname: document["truckname"] as! String, address: document["address"] as! String, lat: document["lat"] as! NSString, long: document["long"] as! NSString))
                 }
-                
+                self.loadPins()
             }
         }
-        
-        
+    }
+    
+    func loadPins(){
+        for t in myTrucks{
+            var lat = t.lat.doubleValue
+            var long = t.long.doubleValue
+            var pin = customPin(pinTitle: t.truckname, pinSubTitle: t.address, location: CLLocationCoordinate2D(latitude: lat, longitude: long))
+            mapView.addAnnotation(pin)
+        }
     }
     
     func setupLocationManager(){
@@ -168,6 +185,55 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         previousLocation = getCenterLocation(for: mapView)
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func checkLocationServiceAuthenticationStatus(){
+        locationManager.delegate = self
+        if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse) { mapView.showsUserLocation = true }
+        else{ locationManager.requestWhenInUseAuthorization() }
+    }
+    
+}
+
+extension MapViewController : CLLocationManagerDelegate{
+        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            //Guard against no location in case location.last is nil
+            guard let location = locations.last else{return}
+            //Creating a center from user's last known location
+            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            //Creating a region with user's last known location as it's center
+            let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        //Update when the user changes the authorization
+        checkLocationAuthorization()
+    }
+}
+
+extension MapViewController: MKMapViewDelegate{
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? customPin {
+            let identifier = "pin"
+            var view: MKPinAnnotationView
+            if let dequeueView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView{
+                dequeueView.annotation = annotation
+                view = dequeueView
+            }else{
+                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view.canShowCallout = true
+                view.calloutOffset = CGPoint(x: -5, y: 5)
+                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+            }
+            return view
+        }
+        return nil
+    }
+    
     func getLongitude(for MapView: MKMapView) -> CLLocationDegrees{
         let long = MapView.centerCoordinate.longitude
         return long
@@ -185,48 +251,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return CLLocation(latitude: latitude, longitude: longitude)
     }
     
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        //Guard against no location in case location.last is nil
-//        guard let location = locations.last else{return}
-//        //Creating a center from user's last known location
-//        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-//        //Creating a region with user's last known location as it's center
-//        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-//        mapView.setRegion(region, animated: true)
-//    }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        //Update when the user changes the authorization
-        checkLocationAuthorization()
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let location = view.annotation as! customPin
+        let launchOption = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
+        location.mapItem().openInMaps(launchOptions: launchOption)
     }
-    
-//    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-//        let center = getCenterLocation(for: mapView)
-//        let geoCoder = CLGeocoder()
-//
-//        guard center.distance(from: previousLocation!) > 50 else{ return }
-//        previousLocation = center
-//
-//        geoCoder.reverseGeocodeLocation(center) {[weak self] (placemarks, error) in
-//            guard let self = self else {return}
-//
-//            if let _ = error {
-//                //TODO: Show alert informing the user
-//                return
-//            }
-//
-//            guard let placemark = placemarks?.first else{
-//                //TODO: Show alert informing the user
-//                return
-//            }
-//
-//            let streetNumber = placemark.subThoroughfare
-//            let streetName = placemark.thoroughfare
-//
-//            DispatchQueue.main.sync {
-//                //self.addressLabel.text = "\(streetNumber) \(streetName)"
-//            }
-//
-//        }
-//    }
 }
