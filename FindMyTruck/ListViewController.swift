@@ -16,8 +16,8 @@ struct Truck {
     var description: String
     var address: String
     var time: String
-    var lat: String
-    var long:String
+    var lat: NSString
+    var long: NSString
     var menu = [String]()
     
 }
@@ -56,7 +56,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             } else {
                 for document in (querySnapshot?.documents)! {
                     self.data[document.documentID] = document.data()
-                    self.myTrucks.append(Truck(username: document["username"] as! String,truckname: document["truckname"] as! String, description: document["description"] as! String,address: document["address"] as! String,time: document["time"] as! String,lat: document["lat"] as! String,long: document["long"] as! String, menu: document["menu"] as! [String]))
+                    self.myTrucks.append(Truck(username: document["username"] as! String,truckname: document["truckname"] as! String, description: document["description"] as! String,address: document["address"] as! String,time: document["time"] as! String,lat: document["lat"] as! NSString,long: document["long"] as! NSString, menu: document["menu"] as! [String]))
                     self.cellNum += 1
                 }
                 
