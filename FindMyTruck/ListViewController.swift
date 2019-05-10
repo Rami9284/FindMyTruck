@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import CoreLocation
 
 struct Truck {
     var username: String
@@ -22,7 +23,7 @@ struct Truck {
     
 }
 
-class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
     var db:Firestore!
     
@@ -31,6 +32,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     var data=[String : Dictionary<String, Any>]()
     var cellNum = 0
     
+    var locManager = CLLocationManager()
+    var currentLocation: CLLocation!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,6 +43,14 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.delegate = self
         tableView.dataSource = self
+        locManager.requestWhenInUseAuthorization()
+        
+        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
+            
+            currentLocation = locManager.location
+            
+        }
         
         loadData()
         
@@ -79,10 +90,15 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! ListCell
+        
+        let loc1 = CLLocation(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+        let loc2 = CLLocation(latitude: myTrucks[indexPath.row].lat.doubleValue, longitude: myTrucks[indexPath.row].long.doubleValue)
+        let distance = loc1.distance(from: loc2)/1609.344
+        let c:String = String(format:"%.1f", distance)
  
         cell.cellTruckname.text = myTrucks[indexPath.row].truckname
         cell.celladdress.text = myTrucks[indexPath.row].description
-        cell.cellDistance.text = "2 miles away"
+        cell.cellDistance.text = c + " miles"
         
         return cell
     }

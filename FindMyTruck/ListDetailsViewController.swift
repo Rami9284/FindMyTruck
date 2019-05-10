@@ -33,7 +33,9 @@ class ListDetailsViewController: UIViewController {
             menu.text = (menu.text ?? "") + each + "\n"
         }
         address.sizeToFit()
+        address.center.x = self.view.center.x
         detailsDescription.sizeToFit()
+        detailsDescription.center.x = self.view.center.x
         menu.sizeToFit()
         menu.center.x = self.view.center.x
         
@@ -50,7 +52,7 @@ class ListDetailsViewController: UIViewController {
         let long = myTruck.long.doubleValue
         let lat = myTruck.lat.doubleValue
         
-        let destCoord = CLLocationCoordinate2DMake(long, lat)
+        let destCoord = CLLocationCoordinate2DMake(lat, long)
         let directionsViewController = segue.destination as! DirectionsViewController
         directionsViewController.destCoordinates = destCoord
         
