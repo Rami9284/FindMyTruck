@@ -32,10 +32,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
-        
-        print(destCoordinates.latitude)
-        print(destCoordinates.longitude)
-        
+                
         let sourceCoordinates = locationManager.location?.coordinate
         let sourcePlacemark = MKPlacemark(coordinate: sourceCoordinates!)
         let destPlacemark = MKPlacemark(coordinate: destCoordinates)
@@ -53,6 +50,11 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
             guard let response = response else {
                 if let error = error {
                     print("Error: " + error.localizedDescription)
+                    let alert = UIAlertController(title: "", message: "\(error.localizedDescription ?? "")", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    
+                    self.present(alert,animated: true)
                 }
                 return
             }

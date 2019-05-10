@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import CoreLocation
 
 struct Truck {
     var username: String
@@ -22,7 +23,7 @@ struct Truck {
     
 }
 
-class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
     var db:Firestore!
     
@@ -31,8 +32,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     var data=[String : Dictionary<String, Any>]()
     var cellNum = 0
     
+    var locManager = CLLocationManager()
+    var currentLocation: CLLocation!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +44,14 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.delegate = self
         tableView.dataSource = self
+        locManager.requestWhenInUseAuthorization()
+        
+        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
+            
+            currentLocation = locManager.location
+            
+        }
         
         loadData()
         
@@ -65,8 +77,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             }
         }
-        
-
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -79,13 +89,56 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! ListCell
+        
+        let loc1 = CLLocation(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+        let loc2 = CLLocation(latitude: myTrucks[indexPath.row].lat.doubleValue, longitude: myTrucks[indexPath.row].long.doubleValue)
+        let distance = loc1.distance(from: loc2)/1609.344
+        let c:String = String(format:"%.1f", distance)
  
         cell.cellTruckname.text = myTrucks[indexPath.row].truckname
         cell.celladdress.text = myTrucks[indexPath.row].description
-        cell.cellDistance.text = "2 miles away"
+        cell.cellDistance.text = c + " miles"
         
         return cell
     }
+    
+    @IBAction func onFilter(_ sender: Any) {
+        if (self.searchBar.text?.isEmpty)! {
+            myTrucks.removeAll()
+            cellNum = 0
+            self.tableView.reloadData()
+            loadData()
+            self.tableView.reloadData()
+        } else {
+        
+            myTrucks.removeAll()
+            cellNum = 0
+            self.tableView.reloadData()
+
+            db.collection("truckusers").getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in (querySnapshot?.documents)! {
+                        self.data[document.documentID] = document.data()
+                        var name = document["truckname"] as! String
+                        name = name.lowercased()
+                        let check = self.searchBar.text?.lowercased() as! String
+                        
+                        if name.contains(check) {
+                            self.myTrucks.append(Truck(username: document["username"] as! String,truckname: document["truckname"] as! String, description: document["description"] as! String,address: document["address"] as! String,time: document["time"] as! String,lat: document["lat"] as! NSString,long: document["long"] as! NSString, menu: document["menu"] as! [String]))
+                            self.cellNum += 1
+                        }
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
