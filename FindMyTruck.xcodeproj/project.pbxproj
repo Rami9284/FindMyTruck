@@ -23,6 +23,7 @@
 		1A8616FE225981E9001D84B7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8616FD225981E8001D84B7 /* MapViewController.swift */; };
 		1A86170222598796001D84B7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A86170122598795001D84B7 /* Login.storyboard */; };
 		1AB208A72280E668003794E7 /* ListDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB208A62280E668003794E7 /* ListDetailsViewController.swift */; };
+		1AF563512283B60600BF94B6 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF563502283B60600BF94B6 /* DirectionsViewController.swift */; };
 		1AF99DAC227A58AD00FD2B7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AF99DAB227A58AD00FD2B7E /* GoogleService-Info.plist */; };
 		39CC2CCE91D84538F24A70F6 /* Pods_FindMyTruckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E123B7FC7FED100F13A8CAAC /* Pods_FindMyTruckUITests.framework */; };
 		BC59F3B1225BF8D3000CAD69 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC59F3B0225BF8D3000CAD69 /* Register.storyboard */; };
@@ -76,6 +77,7 @@
 		1A8616FD225981E8001D84B7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1A86170122598795001D84B7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		1AB208A62280E668003794E7 /* ListDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailsViewController.swift; sourceTree = "<group>"; };
+		1AF563502283B60600BF94B6 /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		1AF99DAB227A58AD00FD2B7E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52CE5BAAC514A9B0075DF85C /* Pods-FindMyTruckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckUITests/Pods-FindMyTruckUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		567755376A50BA10839B13A2 /* Pods-FindMyTruck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				1AB208A62280E668003794E7 /* ListDetailsViewController.swift */,
 				BCCE03842280E34700A3DACE /* AddTruck.storyboard */,
 				BCCE03862280E3D700A3DACE /* AddTruckViewController.swift */,
+				1AF563502283B60600BF94B6 /* DirectionsViewController.swift */,
 			);
 			path = FindMyTruck;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				BC5F554E2266D73C007A954B /* regularuser.swift in Sources */,
 				1A0219D622596A7B0010B94C /* ViewController.swift in Sources */,
 				1A0219D422596A7B0010B94C /* AppDelegate.swift in Sources */,
+				1AF563512283B60600BF94B6 /* DirectionsViewController.swift in Sources */,
 				BC59F3B5225BFB4C000CAD69 /* RegisterViewController.swift in Sources */,
 				1A33C09E22768CDF0072E016 /* ListViewController.swift in Sources */,
 				1A33C09C227686A20072E016 /* ListCell.swift in Sources */,

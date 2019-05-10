@@ -99,10 +99,17 @@ class RegisterViewController: UIViewController {
                         
                         self.present(alert,animated: true)
                     }else if (authResult != nil){
+                        let user = Auth.auth().currentUser
+                        let changeRequest = user?.createProfileChangeRequest()
+                        changeRequest?.displayName = "0"
+                        
+                       
+                        
                         self.db.collection("users").document(email!).setData([
                             "favorites": ["",""]
                         ])
-                        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                        //self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                        self.dismiss(animated: true, completion: nil)
                     }
                 }
             }
@@ -156,12 +163,19 @@ class RegisterViewController: UIViewController {
                 }else if ((authResult) != nil){
                     
                     let user = Auth.auth().currentUser
+                     let changeRequest = user?.createProfileChangeRequest()
+                     changeRequest?.displayName = "1"
+                    changeRequest?.commitChanges{
+                        (error) in print("could not update info")
+                    }
+                    
                     //add entry with truck table
-                    self.db.collection("truckusers").addDocument(data: [
+                    self.db.collection("truckusers").document((user?.uid)!).setData([
                         "username": email,
                         "truckname": truckName,
                         "menu": ["","",""],
-                        "location": "",
+                        "lat":"",
+                        "long": "",
                         "description": "",
                         "address": "",
                     ]) { err in
@@ -169,10 +183,10 @@ class RegisterViewController: UIViewController {
                             print("Error writing document: \(err)")
                         } else {
                             print("Document successfully written!")
+                            self.dismiss(animated: true, completion: nil)
                         }
                     }
                     
-                    self.db.collection("hastruck").document(email!)
                     
                     
                     //self.performSegue(withIdentifier: "loginSegue", sender: nil)
