@@ -176,6 +176,7 @@ class RegisterViewController: UIViewController {
                         "menu": ["","",""],
                         "lat":"",
                         "long": "",
+                        "time":"",
                         "description": "",
                         "address": "",
                     ]) { err in

@@ -133,6 +133,7 @@ class MapViewController: UIViewController{
             try firebaseAuth.signOut()
             onloginBtn.isEnabled = true
             onLogoutBtn.isEnabled = false
+            onAddbtn.isHidden = true
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
