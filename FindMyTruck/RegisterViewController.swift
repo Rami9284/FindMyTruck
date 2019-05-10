@@ -28,6 +28,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var RRetypeP: UITextField!
     @IBOutlet weak var RSignUp: UIButton!
     
+    @IBOutlet weak var tacoimg: UIImageView!
     //truck user
     
     @IBOutlet weak var Trucknamelabel: UILabel!
@@ -69,6 +70,7 @@ class RegisterViewController: UIViewController {
         RtypeLabel.isHidden = false
         RRetypeP.isHidden = false
         RSignUp.isHidden = false
+        tacoimg.isHidden = false
         
         Trucknamelabel.isHidden = true
         TtruckNametext.isHidden = true
@@ -130,6 +132,7 @@ class RegisterViewController: UIViewController {
         RtypeLabel.isHidden = true
         RRetypeP.isHidden = true
         RSignUp.isHidden = true
+        tacoimg.isHidden = true
         
         Trucknamelabel.isHidden = false
         TtruckNametext.isHidden = false
@@ -176,6 +179,7 @@ class RegisterViewController: UIViewController {
                         "menu": ["","",""],
                         "lat":"",
                         "long": "",
+                        "time":"",
                         "description": "",
                         "address": "",
                     ]) { err in
