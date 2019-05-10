@@ -311,8 +311,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LaunchImage" width="153.19148254394531" height="153.19148254394531"/>
         <image name="icons8-list-26" width="19.5" height="19.5"/>
-        <image name="LaunchImage" width="50" height="50"/>
-        <image name="icons8-list-26" width="26" height="26"/>
     </resources>
 </document>

@@ -70,6 +70,7 @@
                         <outlet property="onAddbtn" destination="cOq-8Y-ZhV" id="oYC-FK-42K"/>
                         <outlet property="onLogoutBtn" destination="kHo-wu-TTk" id="lci-To-m4W"/>
                         <outlet property="onloginBtn" destination="1Nb-2h-GCo" id="YyT-hl-gIH"/>
+                        <outlet property="searchBar" destination="ctU-c0-pEE" id="DYB-P6-M6d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYa-60-Bve" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -120,7 +121,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-map-marker-30" width="30" height="30"/>
-        <image name="icons8-plus-90" width="90" height="90"/>
+        <image name="icons8-map-marker-30" width="22.5" height="22.5"/>
+        <image name="icons8-plus-90" width="154.28572082519531" height="154.28572082519531"/>
     </resources>
 </document>

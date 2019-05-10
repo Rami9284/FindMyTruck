@@ -13,6 +13,7 @@ import Parse
 import FirebaseAuth
 import FirebaseFirestore
 import AddressBook
+import AVFoundation
 
 struct mapTruck{
     var truckname: String
@@ -51,19 +52,22 @@ class customPin: NSObject, MKAnnotation {
 
 
 class MapViewController: UIViewController{
-    
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var onAddbtn: UIButton!
+    @IBOutlet weak var onLogoutBtn: UIBarButtonItem!
+    @IBOutlet weak var onloginBtn: UIBarButtonItem!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     private let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
     var previousLocation: CLLocation?
     
-    @IBOutlet weak var onAddbtn: UIButton!
-    @IBOutlet weak var onLogoutBtn: UIBarButtonItem!
-    @IBOutlet weak var onloginBtn: UIBarButtonItem!
-    
     var db:Firestore!
     var data=[String : Dictionary<String, Any>]()
     var myTrucks = [mapTruck]()
+    
+    var audioPlayer = AVAudioPlayer()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,12 +95,19 @@ class MapViewController: UIViewController{
         
         loadData()
 
+
+        //audioPlayer.prepareToPlay()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        checkLocationServiceAuthenticationStatus()
+    @IBAction func modeloTime(sender: AnyObject) {
+        let pianoSound = URL(fileURLWithPath: Bundle.main.path(forResource: "modelotime", ofType: "mp3")!)
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: pianoSound)
+            audioPlayer.prepareToPlay()
+        }catch{
+            
+        }
+        audioPlayer.play()
     }
     
     func loadData(){
@@ -127,16 +138,6 @@ class MapViewController: UIViewController{
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
-    @IBAction func onLogout(_ sender: Any) {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-            onloginBtn.isEnabled = true
-            onLogoutBtn.isEnabled = false
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
-    }
     //Once user's location is determined the map will zoom into location with a span of 10000 meters
     func centerViewOnUserLocation(){
         if let location = locationManager.location?.coordinate{
@@ -196,18 +197,35 @@ class MapViewController: UIViewController{
         else{ locationManager.requestWhenInUseAuthorization() }
     }
     
+    @IBAction func onLogout(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            onloginBtn.isEnabled = true
+            onLogoutBtn.isEnabled = false
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        checkLocationServiceAuthenticationStatus()
+    }
+   
 }
 
 extension MapViewController : CLLocationManagerDelegate{
-        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            //Guard against no location in case location.last is nil
-            guard let location = locations.last else{return}
-            //Creating a center from user's last known location
-            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-            //Creating a region with user's last known location as it's center
-            let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-            mapView.setRegion(region, animated: true)
-        }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        //Guard against no location in case location.last is nil
+        guard let location = locations.last else{return}
+        //Creating a center from user's last known location
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        //Creating a region with user's last known location as it's center
+        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+        mapView.setRegion(region, animated: true)
+    }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         //Update when the user changes the authorization
