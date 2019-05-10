@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import CoreLocation
 
 struct truck{
     var truckname: String
@@ -46,14 +47,16 @@ class AddTruckViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
     
     let pickerData = [["1", "2","3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],[":"],["00","01", "02","03", "04", "05", "06", "07", "08", "09", "10", "11", "12","13", "14","15", "16", "17", "18", "19", "20", "21", "22", "23", "24","25", "26","27", "28", "29", "30", "31", "32", "33", "34", "35", "36","37", "38","39", "40", "41", "42", "43", "44", "45", "46", "47", "48","49","50", "51", "52", "53", "54", "55", "56", "57", "58", "59"],["AM","PM"]]
     
-    var starthour: String = ""
-    var startminutes: String = ""
+    var starthour: String = "1"
+    var startminutes: String = "00"
     var startampm:String = ""
     
-    var endhour: String = ""
-    var endminutes: String = ""
+    var endhour: String = "1"
+    var endminutes: String = "00"
     var endampm:String = ""
     var timeString: String = ""
+    var lat = ""
+    var long = ""
     
     var db:Firestore!
     
@@ -122,30 +125,63 @@ class AddTruckViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
     
     @IBAction func onAdd(_ sender: Any) {
         
+        var data = [String]()
+        let geocoder = CLGeocoder()
+        let address = addressField.text as! String
+        
+        geocoder.geocodeAddressString(addressField.text as! String, completionHandler: {(placemarks, error) -> Void in
+            if((error) != nil){
+                print("Error", error ?? "")
+            }
+            if let placemark = placemarks?.first {
+                let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
+                self.lat = String(format:"%.4f", coordinates.latitude)
+                print("lat: " + self.lat)
+                self.long = String(format:"%.4f", coordinates.longitude)
+                print("long: " + self.long)
+                self.getCoord(lati: self.lat, longi: self.long)
+            }
+        })
+    
+//        while(lat == ""){
+//
+//        }
+        //getCoord()
+        print("Check 1 2 3")
+        
+    }
+    
+    func getCoord(lati: String, longi:String ) {
+
         if(!truckNameField.text!.isEmpty || !addressField.text!.isEmpty){
             let user = Auth.auth().currentUser
+            
             self.db.collection("truckusers").document((user?.uid)!).setData([
-                "truckname": truckNameField.text as Any,
-                "menu": [item1,item2,item3,item4,item5,item6],
-                "lat":"",// get lat and long from address??
-                "long": "",
-                "description": descriptionField.text as Any,
-                "address": addressField.text as Any,
+                
+                "truckname": truckNameField.text as! String,
+                "menu": [item1.text,item2.text,item3.text,item4.text,item5.text,item6.text],
+                "lat": lati,// get lat and long from address??
+                "long": longi,
+                "description": descriptionField.text as! String,
+                "address": addressField.text as! String,
                 "time": timeString
-                ]) { err in
-                    if let err = err {
-                        print("Error writing document: \(err)")
-                    } else {
-                        print("Document successfully written!")
-                        self.dismiss(animated: true, completion: nil)
-                    }
+            ]) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                    self.dismiss(animated: true, completion: nil)
                 }
+            }
         }else {
             let alert = UIAlertController(title: "", message: "Truck name and address can not be empty!", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert,animated: true)
         }
+        
     }
+
     /*
     // MARK: - Navigation
 
