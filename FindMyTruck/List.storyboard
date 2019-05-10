@@ -131,7 +131,7 @@
         <!--Details-->
         <scene sceneID="Ikf-VL-dsT">
             <objects>
-                <viewController id="pBq-BG-WGV" customClass="ListDetailsViewController" customModule="FindMyTruck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="List" id="pBq-BG-WGV" customClass="ListDetailsViewController" customModule="FindMyTruck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ogC-dl-0he">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

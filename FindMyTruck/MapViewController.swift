@@ -216,11 +216,11 @@ extension MapViewController : CLLocationManagerDelegate{
 }
 
 extension MapViewController: MKMapViewDelegate{
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if let annotation = annotation as? customPin {
+   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if var annotation = annotation as? customPin {
             let identifier = "pin"
             var view: MKPinAnnotationView
-            if let dequeueView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView{
+            if var dequeueView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView{
                 dequeueView.annotation = annotation
                 view = dequeueView
             }else{
@@ -235,25 +235,25 @@ extension MapViewController: MKMapViewDelegate{
     }
     
     func getLongitude(for MapView: MKMapView) -> CLLocationDegrees{
-        let long = MapView.centerCoordinate.longitude
+        var long = MapView.centerCoordinate.longitude
         return long
     }
     
     func getLatitude(for MapView: MKMapView) -> CLLocationDegrees{
-        let lat = mapView.centerCoordinate.latitude
+        var lat = mapView.centerCoordinate.latitude
         return lat
     }
     
     func getCenterLocation(for MapView: MKMapView) -> CLLocation {
-        let latitude = mapView.centerCoordinate.latitude
-        let longitude = MapView.centerCoordinate.longitude
+        var latitude = mapView.centerCoordinate.latitude
+        var longitude = MapView.centerCoordinate.longitude
         
         return CLLocation(latitude: latitude, longitude: longitude)
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        let location = view.annotation as! customPin
-        let launchOption = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
+        var location = view.annotation as! customPin
+        var launchOption = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
         location.mapItem().openInMaps(launchOptions: launchOption)
     }
 }
