@@ -160,9 +160,19 @@
                                     <action selector="onTruckSignUp:" destination="wxy-E3-kRf" eventType="touchUpInside" id="OGq-6g-r6B"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="tacoTransparent" translatesAutoresizingMaskIntoConstraints="NO" id="UO6-xc-Tr1">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="tacoTransparent" translatesAutoresizingMaskIntoConstraints="NO" id="UO6-xc-Tr1">
                                 <rect key="frame" x="137" y="187" width="100" height="42"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="fFg-pj-JMm"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="truck" translatesAutoresizingMaskIntoConstraints="NO" id="Opc-BL-dJS">
+                                <rect key="frame" x="172" y="542" width="65" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poof" translatesAutoresizingMaskIntoConstraints="NO" id="V3S-Z1-0Fb">
+                                <rect key="frame" x="121" y="558" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,6 +185,7 @@
                             <constraint firstItem="P87-W9-UzK" firstAttribute="trailing" secondItem="g2F-XM-Leh" secondAttribute="trailing" constant="50" id="5kK-La-PII"/>
                             <constraint firstItem="Zkr-1C-6F4" firstAttribute="top" secondItem="sKN-Hj-rwW" secondAttribute="bottom" constant="8" symbolic="YES" id="6cN-ot-ORZ"/>
                             <constraint firstItem="74S-hP-9u9" firstAttribute="top" secondItem="2C2-6h-KOO" secondAttribute="bottom" constant="25" id="98s-SG-nF9"/>
+                            <constraint firstItem="UO6-xc-Tr1" firstAttribute="centerX" secondItem="eCr-FH-r8c" secondAttribute="centerX" id="9DZ-Mw-jVX"/>
                             <constraint firstItem="sNe-xe-q20" firstAttribute="leading" secondItem="HP4-ZR-wOR" secondAttribute="leading" id="ABu-vZ-g9z"/>
                             <constraint firstItem="suF-5c-rzU" firstAttribute="leading" secondItem="ySx-2s-JRY" secondAttribute="leading" id="BO3-W1-Yxk"/>
                             <constraint firstItem="LuE-CS-Fg3" firstAttribute="leading" secondItem="sKN-Hj-rwW" secondAttribute="leading" id="CCz-nc-BBA"/>
@@ -194,6 +205,7 @@
                             <constraint firstItem="KPC-Bo-vFh" firstAttribute="leading" secondItem="suF-5c-rzU" secondAttribute="leading" id="QLM-gU-obn"/>
                             <constraint firstItem="bOj-6a-iSd" firstAttribute="top" secondItem="g2F-XM-Leh" secondAttribute="bottom" constant="8" symbolic="YES" id="QZw-XM-MZI"/>
                             <constraint firstItem="KPC-Bo-vFh" firstAttribute="top" secondItem="bOj-6a-iSd" secondAttribute="bottom" constant="8" symbolic="YES" id="Qh6-OO-Mnq"/>
+                            <constraint firstItem="UO6-xc-Tr1" firstAttribute="top" secondItem="74S-hP-9u9" secondAttribute="top" id="TxQ-3p-wDZ"/>
                             <constraint firstItem="suF-5c-rzU" firstAttribute="trailing" secondItem="sKN-Hj-rwW" secondAttribute="trailing" id="VCX-ft-PP9"/>
                             <constraint firstItem="LuE-CS-Fg3" firstAttribute="top" secondItem="ySx-2s-JRY" secondAttribute="bottom" constant="7" id="VNX-6E-wNZ"/>
                             <constraint firstItem="HP4-ZR-wOR" firstAttribute="leading" secondItem="8rj-a7-H9K" secondAttribute="leading" id="Xas-2R-wS5"/>
@@ -201,11 +213,13 @@
                             <constraint firstItem="g2F-XM-Leh" firstAttribute="leading" secondItem="bOj-6a-iSd" secondAttribute="leading" id="aZh-Ha-TTY"/>
                             <constraint firstItem="R1J-cO-cAi" firstAttribute="top" secondItem="P87-W9-UzK" secondAttribute="top" constant="24" id="aka-a3-o9q"/>
                             <constraint firstItem="HP4-ZR-wOR" firstAttribute="top" secondItem="Zkr-1C-6F4" secondAttribute="bottom" constant="8" symbolic="YES" id="b2K-Lm-X4c"/>
+                            <constraint firstItem="KPC-Bo-vFh" firstAttribute="top" secondItem="UO6-xc-Tr1" secondAttribute="bottom" constant="54" id="bd6-Ao-cOH"/>
                             <constraint firstItem="74S-hP-9u9" firstAttribute="leading" secondItem="P87-W9-UzK" secondAttribute="leading" constant="53" id="cx6-b8-7h8"/>
                             <constraint firstItem="R1J-cO-cAi" firstAttribute="leading" secondItem="2C2-6h-KOO" secondAttribute="leading" id="dI9-4h-kha"/>
                             <constraint firstItem="P87-W9-UzK" firstAttribute="trailing" secondItem="eCr-FH-r8c" secondAttribute="trailing" constant="90" id="ddg-53-Ehz"/>
                             <constraint firstItem="2C2-6h-KOO" firstAttribute="centerX" secondItem="suF-5c-rzU" secondAttribute="centerX" id="dkH-Ar-og0"/>
                             <constraint firstItem="eCr-FH-r8c" firstAttribute="leading" secondItem="P87-W9-UzK" secondAttribute="leading" constant="89" id="eHh-Gm-D8g"/>
+                            <constraint firstItem="UO6-xc-Tr1" firstAttribute="leading" secondItem="P87-W9-UzK" secondAttribute="leading" constant="137" id="fUL-hc-Hjw"/>
                             <constraint firstItem="l6J-Zy-SJo" firstAttribute="leading" secondItem="8rj-a7-H9K" secondAttribute="leading" id="hsy-gl-uwf"/>
                             <constraint firstItem="P87-W9-UzK" firstAttribute="trailing" secondItem="R1J-cO-cAi" secondAttribute="trailing" constant="26" id="i15-E9-ja3"/>
                             <constraint firstItem="g2F-XM-Leh" firstAttribute="top" secondItem="74S-hP-9u9" secondAttribute="bottom" constant="8" symbolic="YES" id="iZ1-z2-wW6"/>
@@ -233,9 +247,11 @@
                         <outlet property="TtruckNametext" destination="g2F-XM-Leh" id="FoO-N5-eqJ"/>
                         <outlet property="TusernameText" destination="KPC-Bo-vFh" id="lTB-j8-jtY"/>
                         <outlet property="Tusernamelabel" destination="bOj-6a-iSd" id="b4G-2D-ZmL"/>
+                        <outlet property="poofimg" destination="V3S-Z1-0Fb" id="iE9-1b-ezi"/>
                         <outlet property="retypepassLabel" destination="sbD-i8-OcD" id="acP-Fw-9kr"/>
                         <outlet property="tacoimg" destination="UO6-xc-Tr1" id="hbl-Xz-iWN"/>
                         <outlet property="truckSignUp" destination="8rj-a7-H9K" id="HUu-9D-KqO"/>
+                        <outlet property="truckimg" destination="Opc-BL-dJS" id="h9F-4E-0rZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8y-r3-rTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -244,6 +260,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="poof" width="75" height="75"/>
         <image name="tacoTransparent" width="181" height="176"/>
+        <image name="truck" width="75" height="75"/>
     </resources>
 </document>

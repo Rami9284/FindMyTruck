@@ -29,6 +29,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var RSignUp: UIButton!
     
     @IBOutlet weak var tacoimg: UIImageView!
+    @IBOutlet weak var truckimg: UIImageView!
+    @IBOutlet weak var poofimg: UIImageView!
+    
     //truck user
     
     @IBOutlet weak var Trucknamelabel: UILabel!
@@ -80,6 +83,8 @@ class RegisterViewController: UIViewController {
         retypepassLabel.isHidden = true
         Tretypepass.isHidden = true
         truckSignUp.isHidden = true
+        truckimg.isHidden = true
+        poofimg.isHidden = true
     
     }
     
@@ -142,7 +147,8 @@ class RegisterViewController: UIViewController {
         retypepassLabel.isHidden = false
         Tretypepass.isHidden = false
         truckSignUp.isHidden = false
-        
+        truckimg.isHidden = false
+        poofimg.isHidden = false
     }
     
     @IBAction func onTruckSignUp(_ sender: Any) {
