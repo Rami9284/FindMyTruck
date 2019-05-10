@@ -117,6 +117,7 @@ class RegisterViewController: UIViewController {
             let alert = UIAlertController(title: "", message: "Fields can not be empty!", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert,animated: true)
         }
     }
     

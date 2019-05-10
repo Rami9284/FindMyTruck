@@ -139,16 +139,19 @@ class AddTruckViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
                 print("lat: " + self.lat)
                 self.long = String(format:"%.4f", coordinates.longitude)
                 print("long: " + self.long)
+                self.getCoord(lati: self.lat, longi: self.long)
             }
         })
     
-    
-        getCoord()
+//        while(lat == ""){
+//
+//        }
+        //getCoord()
         print("Check 1 2 3")
         
     }
     
-    func getCoord() {
+    func getCoord(lati: String, longi:String ) {
 
         if(!truckNameField.text!.isEmpty || !addressField.text!.isEmpty){
             let user = Auth.auth().currentUser
@@ -157,8 +160,8 @@ class AddTruckViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
                 
                 "truckname": truckNameField.text as! String,
                 "menu": [item1.text,item2.text,item3.text,item4.text,item5.text,item6.text],
-                "lat": lat,// get lat and long from address??
-                "long": long,
+                "lat": lati,// get lat and long from address??
+                "long": longi,
                 "description": descriptionField.text as! String,
                 "address": addressField.text as! String,
                 "time": timeString
@@ -174,6 +177,7 @@ class AddTruckViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
             let alert = UIAlertController(title: "", message: "Truck name and address can not be empty!", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert,animated: true)
         }
         
     }
