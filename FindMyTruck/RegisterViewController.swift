@@ -108,7 +108,8 @@ class RegisterViewController: UIViewController {
                         self.db.collection("users").document(email!).setData([
                             "favorites": ["",""]
                         ])
-                        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                        //self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                        self.dismiss(animated: true, completion: nil)
                     }
                 }
             }
