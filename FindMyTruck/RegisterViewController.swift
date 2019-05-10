@@ -117,6 +117,7 @@ class RegisterViewController: UIViewController {
                         ])
                         //self.performSegue(withIdentifier: "loginSegue", sender: nil)
                         self.dismiss(animated: true, completion: nil)
+                        
                     }
                 }
             }
@@ -193,7 +194,15 @@ class RegisterViewController: UIViewController {
                             print("Error writing document: \(err)")
                         } else {
                             print("Document successfully written!")
-                            self.dismiss(animated: true, completion: nil)
+                            UIView.animate(withDuration: 0.8, animations: {
+                                self.truckimg.center.x += 300
+                                self.poofimg.center.x += 300
+                                
+                            })
+                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                                self.dismiss(animated: true, completion: nil)
+                            })
+                            //self.dismiss(animated: true, completion: nil)
                         }
                     }
                     
