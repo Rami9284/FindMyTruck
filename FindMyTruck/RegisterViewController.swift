@@ -29,6 +29,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var RSignUp: UIButton!
     
     @IBOutlet weak var tacoimg: UIImageView!
+    @IBOutlet weak var truckimg: UIImageView!
+    @IBOutlet weak var poofimg: UIImageView!
+    
     //truck user
     
     @IBOutlet weak var Trucknamelabel: UILabel!
@@ -80,6 +83,8 @@ class RegisterViewController: UIViewController {
         retypepassLabel.isHidden = true
         Tretypepass.isHidden = true
         truckSignUp.isHidden = true
+        truckimg.isHidden = true
+        poofimg.isHidden = true
     
     }
     
@@ -112,6 +117,7 @@ class RegisterViewController: UIViewController {
                         ])
                         //self.performSegue(withIdentifier: "loginSegue", sender: nil)
                         self.dismiss(animated: true, completion: nil)
+                        
                     }
                 }
             }
@@ -143,7 +149,8 @@ class RegisterViewController: UIViewController {
         retypepassLabel.isHidden = false
         Tretypepass.isHidden = false
         truckSignUp.isHidden = false
-        
+        truckimg.isHidden = false
+        poofimg.isHidden = false
     }
     
     @IBAction func onTruckSignUp(_ sender: Any) {
@@ -188,7 +195,15 @@ class RegisterViewController: UIViewController {
                             print("Error writing document: \(err)")
                         } else {
                             print("Document successfully written!")
-                            self.dismiss(animated: true, completion: nil)
+                            UIView.animate(withDuration: 0.8, animations: {
+                                self.truckimg.center.x += 300
+                                self.poofimg.center.x += 300
+                                
+                            })
+                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                                self.dismiss(animated: true, completion: nil)
+                            })
+                            //self.dismiss(animated: true, completion: nil)
                         }
                     }
                     

@@ -26,6 +26,7 @@
 		1AF563512283B60600BF94B6 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF563502283B60600BF94B6 /* DirectionsViewController.swift */; };
 		1AF99DAC227A58AD00FD2B7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AF99DAB227A58AD00FD2B7E /* GoogleService-Info.plist */; };
 		39CC2CCE91D84538F24A70F6 /* Pods_FindMyTruckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E123B7FC7FED100F13A8CAAC /* Pods_FindMyTruckUITests.framework */; };
+		78ABA74822854514009BA6EB /* modelotime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 78ABA74722854513009BA6EB /* modelotime.mp3 */; };
 		BC59F3B1225BF8D3000CAD69 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC59F3B0225BF8D3000CAD69 /* Register.storyboard */; };
 		BC59F3B5225BFB4C000CAD69 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC59F3B4225BFB4C000CAD69 /* RegisterViewController.swift */; };
 		BC5F554E2266D73C007A954B /* regularuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5F554C2266D73C007A954B /* regularuser.swift */; };
@@ -81,6 +82,7 @@
 		1AF99DAB227A58AD00FD2B7E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52CE5BAAC514A9B0075DF85C /* Pods-FindMyTruckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckUITests/Pods-FindMyTruckUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		567755376A50BA10839B13A2 /* Pods-FindMyTruck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruck/Pods-FindMyTruck.debug.xcconfig"; sourceTree = "<group>"; };
+		78ABA74722854513009BA6EB /* modelotime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = modelotime.mp3; path = FindMyTruck/Assets.xcassets/modelotime.mp3; sourceTree = SOURCE_ROOT; };
 		87B8137240379A68ACA9B68F /* Pods-FindMyTruckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyTruckTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyTruckTests/Pods-FindMyTruckTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B85E4AE6E67282A5E582707A /* Pods_FindMyTruckTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyTruckTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC59F3B0225BF8D3000CAD69 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		1A0219D222596A7B0010B94C /* FindMyTruck */ = {
 			isa = PBXGroup;
 			children = (
+				78ABA746228544C8009BA6EB /* Sound */,
 				BC5F55492266D2DF007A954B /* userTypes */,
 				1A0219D322596A7B0010B94C /* AppDelegate.swift */,
 				1A0219D522596A7B0010B94C /* ViewController.swift */,
@@ -201,6 +204,14 @@
 				E123B7FC7FED100F13A8CAAC /* Pods_FindMyTruckUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78ABA746228544C8009BA6EB /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				78ABA74722854513009BA6EB /* modelotime.mp3 */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 		7D2893A8975B18B018C2F864 /* Pods */ = {
@@ -346,6 +357,7 @@
 				1AF99DAC227A58AD00FD2B7E /* GoogleService-Info.plist in Resources */,
 				BC5F55532266D876007A954B /* truckOwner.xib in Resources */,
 				1A8616F822597279001D84B7 /* Home.storyboard in Resources */,
+				78ABA74822854514009BA6EB /* modelotime.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
