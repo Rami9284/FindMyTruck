@@ -24,10 +24,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYk-ck-oUa">
-                                <rect key="frame" x="310" y="64" width="38" height="56"/>
+                                <rect key="frame" x="310" y="64" width="65" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Filter"/>
+                                <connections>
+                                    <action selector="onFilter:" destination="vAG-pb-5a3" eventType="touchUpInside" id="9Rd-Jd-4bK"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eME-cV-wEh">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
@@ -97,6 +100,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="qut-Us-DcU" id="y04-nG-srN"/>
                         <outlet property="tableView" destination="eME-cV-wEh" id="KK9-n5-6sw"/>
                     </connections>
                 </viewController>

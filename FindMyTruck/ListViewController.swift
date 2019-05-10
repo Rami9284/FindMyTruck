@@ -36,6 +36,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     var currentLocation: CLLocation!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,8 +77,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             }
         }
-        
-
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -102,6 +101,44 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+    
+    @IBAction func onFilter(_ sender: Any) {
+        if (self.searchBar.text?.isEmpty)! {
+            myTrucks.removeAll()
+            cellNum = 0
+            self.tableView.reloadData()
+            loadData()
+            self.tableView.reloadData()
+        } else {
+        
+            myTrucks.removeAll()
+            cellNum = 0
+            self.tableView.reloadData()
+
+            db.collection("truckusers").getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in (querySnapshot?.documents)! {
+                        self.data[document.documentID] = document.data()
+                        var name = document["truckname"] as! String
+                        name = name.lowercased()
+                        let check = self.searchBar.text?.lowercased() as! String
+                        
+                        if name.contains(check) {
+                            self.myTrucks.append(Truck(username: document["username"] as! String,truckname: document["truckname"] as! String, description: document["description"] as! String,address: document["address"] as! String,time: document["time"] as! String,lat: document["lat"] as! NSString,long: document["long"] as! NSString, menu: document["menu"] as! [String]))
+                            self.cellNum += 1
+                        }
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
