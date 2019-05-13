@@ -79,6 +79,7 @@ Allow food truck owners to broadcast their location and notify subscribers that 
 ### Update 4/13/19
 <img src="http://g.recordit.co/lFYgyGKUze.gif">
 <img src="http://g.recordit.co/nvhI8SyYZl.gif">
+<img src="http://g.recordit.co/LBS9GPBuOG.gif">
 
 ## Schema 
 ### Models
