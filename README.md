@@ -77,7 +77,6 @@ Allow food truck owners to broadcast their location and notify subscribers that 
 <img src="https://i.imgur.com/wecjDNT.png" height=200>
 
 ### Update 4/13/19
-<img src="http://g.recordit.co/72qXuWSfTU.gif">
 <img src="http://g.recordit.co/lFYgyGKUze.gif">
 <img src="http://g.recordit.co/nvhI8SyYZl.gif">
 
